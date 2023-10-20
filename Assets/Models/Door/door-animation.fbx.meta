@@ -33,7 +33,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: door|door-close
+      name: door-close
       takeName: door|door-close
       internalID: -2714362620329019558
       firstFrame: 0
@@ -62,7 +62,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: door|door-open
+      name: door-open
       takeName: door|door-open
       internalID: -647207832544317231
       firstFrame: 0
