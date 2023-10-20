@@ -174,3 +174,27 @@ Received Import Request.
   path: Assets/Scenes
   artifactKey: Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes using Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8193726cff86800c54781cdc6d54904') in 0.004123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 109.189697 seconds.
+  path: Assets/Models
+  artifactKey: Guid(44dd0b8bb8f99c9488eb078fcbb6c3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models using Guid(44dd0b8bb8f99c9488eb078fcbb6c3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff2459a653dfffa513c100622e89363') in 0.001258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.537947 seconds.
+  path: Assets/Models/Door
+  artifactKey: Guid(04f885cac746e8c498883c553d57dfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Door using Guid(04f885cac746e8c498883c553d57dfa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eda5560dc5ce44b03f0e8908f58cb52') in 0.001167 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.078299 seconds.
+  path: Assets/Models/Door/door-animation.blend
+  artifactKey: Guid(9497b08c86fa53f40806924569bcd717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Door/door-animation.blend using Guid(9497b08c86fa53f40806924569bcd717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81ff3a479749455276eb71fce58a4a42') in 0.767925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.923016 seconds.
+  path: Assets/Models/door.meta copy
+  artifactKey: Guid(b9016e0294e0f4b4582e587cf169da2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/door.meta copy using Guid(b9016e0294e0f4b4582e587cf169da2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a24f1b2b02d68c355d3a563197d7773') in 0.038715 seconds 
