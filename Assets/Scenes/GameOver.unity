@@ -481,10 +481,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 847731603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac55e4ce4dfa2614b8e17b45547f852e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d794c79dbf0b704ca38e3c1894bb2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Replay: GamePlay
+  replay: GamePlay
 --- !u!1 &1299950140
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,10 +942,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1626607817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daed8e25af6f6cb4299c84cada897a61, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bb561a859b0031409a8ab73ce5dc0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenu: MainMenu
+  home: MainMenu
 --- !u!1 &1660139923
 GameObject:
   m_ObjectHideFlags: 0
