@@ -6,6 +6,10 @@ public class Doorbell : MonoBehaviour
 {
     private AudioSource doorBellAudio;
     public Animator doorAnimator;
+<<<<<<< HEAD
+=======
+    public Animator lookAnimator;
+>>>>>>> 6e49f0332ccea76b61fc636f3e33d27090929f40
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +39,7 @@ public class Doorbell : MonoBehaviour
         GameObject door = GameObject.FindGameObjectWithTag("door");
         Animator doorAnimator = door.GetComponent<Animator>();
 
+<<<<<<< HEAD
         if (door != null)
         {
             doorAnimator.SetBool("Open", true);
@@ -46,3 +51,28 @@ public class Doorbell : MonoBehaviour
     }
 }
          
+=======
+
+        if (door != null)
+        {
+            doorAnimator.SetBool("door-open", true);
+            Debug.Log("animation");
+            StartCoroutine(Look());
+        }
+    }
+
+    private IEnumerator Look()
+    {
+        yield return new WaitForSeconds(2f);
+        GameObject character = GameObject.FindGameObjectWithTag("character");
+        Animator lookAnimator = character.GetComponent<Animator>();
+
+
+        if (character != null)
+        {
+            lookAnimator.SetBool("isOpen", true);
+            Debug.Log("animation");
+        }
+    }
+}
+>>>>>>> 6e49f0332ccea76b61fc636f3e33d27090929f40
