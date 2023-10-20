@@ -1,10 +1,19 @@
 Using pre-set license
+<<<<<<< HEAD
+Built from '2021.3/evg/staging/82bb020e-b03b1330/draft-0' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit Core' Language: 'en' Physical Memory: 31892 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\2021.3.16f1\Editor\Unity.exe
+=======
 Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
 OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'en' Physical Memory: 16348 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
 D:\Documents\Unity\2021.3.16f1\Editor\Unity.exe
+>>>>>>> parent of 75d75faf (win state)
 -adb2
 -batchMode
 -noUpm
@@ -15,9 +24,15 @@ D:/Documents/GitHub/CART415-GJ2
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
+<<<<<<< HEAD
+49518
+Successfully changed project path to: C:/Users/Anthony/Desktop/Game2/CART415-GJ2
+C:/Users/Anthony/Desktop/Game2/CART415-GJ2
+=======
 60811
 Successfully changed project path to: D:/Documents/GitHub/CART415-GJ2
 D:/Documents/GitHub/CART415-GJ2
+>>>>>>> parent of 75d75faf (win state)
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,15 +62,27 @@ D:/Documents/GitHub/CART415-GJ2
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< HEAD
+Player connection [25808] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2727723017 [EditorId] 2727723017 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-654B7SQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+=======
 Player connection [15760] Host "[IP] 192.168.2.87 [Port] 0 [Flags] 2 [Guid] 2094408241 [EditorId] 2094408241 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-21F1F79) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+>>>>>>> parent of 75d75faf (win state)
 
-Player connection [15760] Host "[IP] 192.168.2.87 [Port] 0 [Flags] 2 [Guid] 2094408241 [EditorId] 2094408241 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-21F1F79) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [25808] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2727723017 [EditorId] 2727723017 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-654B7SQ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
+<<<<<<< HEAD
+Refreshing native plugins compatible for Editor in 51.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path D:/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Anthony/Desktop/Game2/CART415-GJ2/Assets
+=======
 Refreshing native plugins compatible for Editor in 86.79 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path D:/Documents/Unity/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/Documents/GitHub/CART415-GJ2/Assets
+>>>>>>> parent of 75d75faf (win state)
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -64,6 +91,18 @@ Direct3D:
     VRAM:     6043 MB
     Driver:   31.0.15.3623
 Initialize mono
+<<<<<<< HEAD
+Mono path[0] = 'D:/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'D:/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000851 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 55.83 ms, found 3 plugins.
+=======
 Mono path[0] = 'D:/Documents/Unity/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Documents/Unity/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Documents/Unity/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
@@ -78,84 +117,92 @@ Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 77.25 ms, found 3 plugins.
+>>>>>>> parent of 75d75faf (win state)
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.670 seconds
+- Completed reload, in  0.366 seconds
 Domain Reload Profiling:
-	ReloadAssembly (670ms)
-		BeginReloadAssembly (72ms)
+	ReloadAssembly (366ms)
+		BeginReloadAssembly (40ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (485ms)
-			LoadAssemblies (71ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (271ms)
+			LoadAssemblies (39ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (106ms)
+			SetupTypeCache (64ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (291ms)
+			RebuildScriptCaches (14ms)
+			SetupLoadedEditorAssemblies (164ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (77ms)
+				RefreshPlugins (56ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (151ms)
-				ProcessInitializeOnLoadMethodAttributes (52ms)
+				ProcessInitializeOnLoadAttributes (79ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004722 seconds.
+Registered in 0.002508 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image D:\Documents\GitHub\CART415-GJ2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image D:\Documents\GitHub\CART415-GJ2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Anthony\Desktop\Game2\CART415-GJ2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Anthony\Desktop\Game2\CART415-GJ2\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.080 seconds
+- Completed reload, in  0.591 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1081ms)
-		BeginReloadAssembly (116ms)
+	ReloadAssembly (591ms)
+		BeginReloadAssembly (63ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (850ms)
-			LoadAssemblies (84ms)
+			CreateAndSetChildDomain (12ms)
+		EndReloadAssembly (458ms)
+			LoadAssemblies (45ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (277ms)
+			SetupTypeCache (164ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (61ms)
-			SetupLoadedEditorAssemblies (391ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (198ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (80ms)
-				ProcessInitializeOnLoadAttributes (272ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
-				AfterProcessingInitializeOnLoad (4ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (46ms)
+				ProcessInitializeOnLoadAttributes (135ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
+<<<<<<< HEAD
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+=======
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
 Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+>>>>>>> parent of 75d75faf (win state)
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3378 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (56.7 KB). Loaded Objects now: 3838.
+Unloading 3380 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (56.8 KB). Loaded Objects now: 3840.
 Memory consumption went from 118.0 MB to 117.9 MB.
+<<<<<<< HEAD
+Total: 2.642300 ms (FindLiveObjects: 0.284100 ms CreateObjectMapping: 0.079900 ms MarkObjects: 2.228700 ms  DeleteObjects: 0.048800 ms)
+=======
 Total: 2.804700 ms (FindLiveObjects: 0.277200 ms CreateObjectMapping: 0.214200 ms MarkObjects: 2.241300 ms  DeleteObjects: 0.071200 ms)
+>>>>>>> parent of 75d75faf (win state)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -168,3 +215,12 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+<<<<<<< HEAD
+========================================================================
+Received Import Request.
+  Time since last request: 29717.166264 seconds.
+  path: Assets/Scenes/GameWin.unity
+  artifactKey: Guid(bc0a1e97a8e99f642b00b8d7dcb81435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameWin.unity using Guid(bc0a1e97a8e99f642b00b8d7dcb81435) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10e03f989aff513075f8f885b2b2fb8a') in 0.005113 seconds 
+=======
+>>>>>>> parent of 75d75faf (win state)

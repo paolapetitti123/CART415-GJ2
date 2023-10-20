@@ -7,9 +7,12 @@ public class Doorbell : MonoBehaviour
     private AudioSource doorBellAudio;
     public Animator doorAnimator;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public Animator lookAnimator;
 >>>>>>> 6e49f0332ccea76b61fc636f3e33d27090929f40
+=======
+>>>>>>> parent of 75d75faf (win state)
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +43,9 @@ public class Doorbell : MonoBehaviour
         Animator doorAnimator = door.GetComponent<Animator>();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 75d75faf (win state)
         if (door != null)
         {
             doorAnimator.SetBool("Open", true);
@@ -50,6 +56,7 @@ public class Doorbell : MonoBehaviour
         }
     }
 }
+<<<<<<< HEAD
          
 =======
 
@@ -76,3 +83,6 @@ public class Doorbell : MonoBehaviour
     }
 }
 >>>>>>> 6e49f0332ccea76b61fc636f3e33d27090929f40
+=======
+         
+>>>>>>> parent of 75d75faf (win state)
