@@ -41,7 +41,11 @@ RenderSettings:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.18312888, g: 0.22881201, b: 0.3068099, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0.18305814, g: 0.22873765, b: 0.3067077, a: 1}
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_IndirectSpecularColor: {r: 0.18305814, g: 0.22873765, b: 0.3067077, a: 1}
 >>>>>>> parent of 75d75faf (win state)
@@ -516,7 +520,10 @@ CanvasRenderer:
   m_GameObject: {fileID: 218072788}
   m_CullTransparentMesh: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
 --- !u!1001 &290765481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -594,6 +601,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: eac55ba80dc1345d4a96f3b4997dbb55, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a005c84d64084a7ebaa9a6c847fa0f1, type: 3}
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
 --- !u!1 &511600190
 GameObject:
@@ -824,7 +834,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+  m_RootOrder: 0
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_RootOrder: 0
 >>>>>>> parent of 75d75faf (win state)
@@ -1002,7 +1016,11 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -10.2, y: 34.1, z: 63}
+=======
+  m_LocalPosition: {x: -10.2, y: 53.549995, z: 63}
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_LocalPosition: {x: -10.2, y: 53.549995, z: 63}
 >>>>>>> parent of 75d75faf (win state)
@@ -1017,7 +1035,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+  m_RootOrder: 2
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_RootOrder: 2
 >>>>>>> parent of 75d75faf (win state)
@@ -1196,7 +1218,11 @@ RectTransform:
   - {fileID: 1035082466}
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+  m_RootOrder: 7
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_RootOrder: 7
 >>>>>>> parent of 75d75faf (win state)
@@ -1210,7 +1236,10 @@ RectTransform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
 =======
@@ -1259,6 +1288,9 @@ Animation:
   m_CullingType: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
@@ -1342,8 +1374,11 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691a028e76860492f99f829a0fc52da8, type: 3}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6e49f0332ccea76b61fc636f3e33d27090929f40
+=======
+>>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
 --- !u!1 &981770798
@@ -1847,8 +1882,13 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.08}
+=======
+  m_LocalRotation: {x: 0.025217377, y: 0, z: 0, w: 0.99968207}
+  m_LocalPosition: {x: 0, y: 24.47, z: 0.08}
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_LocalRotation: {x: 0.025217377, y: 0, z: 0, w: 0.99968207}
   m_LocalPosition: {x: 0, y: 24.47, z: 0.08}
@@ -1867,6 +1907,7 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 5
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1878,6 +1919,10 @@ Transform:
   m_LocalEulerAnglesHint: {x: 2.89, y: 0, z: 0}
 >>>>>>> parent of 75d75faf (win state)
 =======
+  m_LocalEulerAnglesHint: {x: 2.89, y: 0, z: 0}
+>>>>>>> parent of 75d75faf (win state)
+=======
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 2.89, y: 0, z: 0}
 >>>>>>> parent of 75d75faf (win state)
 =======
@@ -2039,7 +2084,10 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
 =======
@@ -2151,6 +2199,9 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: dcb7c038274a8ae4289f34acb6cd5e86, type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
@@ -2322,7 +2373,11 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 3.02, y: 7.46, z: -9.08}
+=======
+  m_LocalPosition: {x: 3.02, y: 26.91, z: -9.08}
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_LocalPosition: {x: 3.02, y: 26.91, z: -9.08}
 >>>>>>> parent of 75d75faf (win state)
@@ -2337,7 +2392,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+  m_RootOrder: 1
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_RootOrder: 1
 >>>>>>> parent of 75d75faf (win state)
@@ -2418,6 +2477,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566756580}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &1573616804
 PrefabInstance:
@@ -2571,6 +2631,8 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+=======
+>>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
 --- !u!1 &1647236233
@@ -2956,7 +3018,10 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
 =======
@@ -3036,6 +3101,9 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0c0b930b751ddd34e93d53386e9867ca, type: 3}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
@@ -3120,7 +3188,10 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
 =======
@@ -3174,6 +3245,9 @@ Animation:
   m_CullingType: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
@@ -3332,8 +3406,11 @@ CanvasRenderer:
   m_GameObject: {fileID: 2129080216}
   m_CullTransparentMesh: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &335143483815078730
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
 --- !u!23 &117396262196107644
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3440,6 +3517,9 @@ MeshRenderer:
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &1794864430696948909
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
 Transform:
   m_ObjectHideFlags: 0
@@ -3448,6 +3528,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
   m_GameObject: {fileID: 6319724287093701829}
@@ -3522,7 +3605,11 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -0, y: 0, z: 0}
+=======
+  m_LocalPosition: {x: -0, y: 0, z: -0}
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_LocalPosition: {x: -0, y: 0, z: -0}
 >>>>>>> parent of 75d75faf (win state)
@@ -3554,9 +3641,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2486196672840938840}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   m_GameObject: {fileID: 7821594731005097493}
 >>>>>>> 6e49f0332ccea76b61fc636f3e33d27090929f40
+=======
+>>>>>>> parent of 75d75faf (win state)
 =======
 >>>>>>> parent of 75d75faf (win state)
   m_LocalRotation: {x: -0.000000037748954, y: 0, z: -0, w: 1}
@@ -3564,6 +3654,7 @@ Transform:
   m_LocalScale: {x: 0.052843235, y: 0.052843235, z: 0.052843235}
   m_ConstrainProportionsScale: 0
   m_Children: []
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Father: {fileID: 1642845082869283841}
   m_RootOrder: 2
@@ -3612,10 +3703,15 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1855332986534363016
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
   m_Father: {fileID: 6397313389361282892}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6020189063238837750
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
 GameObject:
   m_ObjectHideFlags: 0
@@ -3625,10 +3721,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 6261129333155162080}
   - component: {fileID: 5769901339863012579}
   - component: {fileID: 5740487550464252465}
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
   - component: {fileID: 6397313389361282892}
   m_Layer: 0
   m_Name: doorBell
@@ -3648,6 +3747,9 @@ GameObject:
   - component: {fileID: 1794864430696948909}
   - component: {fileID: 2168926284292609966}
   - component: {fileID: 117396262196107644}
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
   m_Layer: 0
   m_Name: Doorbell
@@ -3657,8 +3759,13 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &2127773023222884027
 GameObject:
+=======
+--- !u!4 &6397313389361282892
+Transform:
+>>>>>>> parent of 75d75faf (win state)
 =======
 --- !u!4 &6397313389361282892
 Transform:
@@ -3667,6 +3774,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 6020189063238837750}
@@ -3687,11 +3795,16 @@ Transform:
   m_ConstrainProportionsScale: 1
 >>>>>>> parent of 75d75faf (win state)
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
   m_GameObject: {fileID: 6020189063238837750}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 10.95, y: 28.85, z: 39.38}
   m_LocalScale: {x: 0.58, y: 0.58, z: 0.58}
   m_ConstrainProportionsScale: 1
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
   m_Children:
   - {fileID: 3662084382808962791}
@@ -3703,6 +3816,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &6689197583709790027
 Transform:
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   serializedVersion: 6
@@ -3720,10 +3834,13 @@ MeshRenderer:
 >>>>>>> 6e49f0332ccea76b61fc636f3e33d27090929f40
 =======
 >>>>>>> parent of 75d75faf (win state)
+=======
+>>>>>>> parent of 75d75faf (win state)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 5758416202819337366}
   m_Enabled: 1
@@ -3950,6 +4067,8 @@ Transform:
 --- !u!1 &7821594731005097493
 GameObject:
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
   m_GameObject: {fileID: 3590737536765172110}
   m_LocalRotation: {x: -0.000000037748954, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.0618746, z: 0.09125269}
@@ -3961,11 +4080,15 @@ GameObject:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7151964354763193932
 MeshFilter:
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   serializedVersion: 6
   m_Component:
@@ -3982,15 +4105,21 @@ MeshFilter:
 --- !u!4 &8996232811631637930
 Transform:
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
   m_GameObject: {fileID: 135492005692669915}
   m_Mesh: {fileID: -5447036705194824928, guid: 4e692722be3cc462d8ab23bf62cb522d, type: 3}
 --- !u!23 &7443628976676839785
 MeshRenderer:
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 5758416202819337366}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
@@ -4003,6 +4132,8 @@ MeshRenderer:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8996232811631637931
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
   m_GameObject: {fileID: 2486196672840938840}
   m_Enabled: 1
   m_CastShadows: 1
@@ -4082,6 +4213,9 @@ MeshRenderer:
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!82 &7986817728175554742
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4089,17 +4223,23 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_GameObject: {fileID: 5758416202819337366}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f68cb30b23abc45d19fe032b648a5913, type: 3}
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
   m_GameObject: {fileID: 135492005692669915}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 75cac28bcbd5d418fab6a0feeaf43765, type: 3}
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -4114,6 +4254,7 @@ AudioSource:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   MinDistance: 1.7823386
 =======
   MinDistance: 1
@@ -4124,6 +4265,9 @@ AudioSource:
 =======
   MinDistance: 1
 >>>>>>> 6e49f0332ccea76b61fc636f3e33d27090929f40
+=======
+  MinDistance: 1
+>>>>>>> parent of 75d75faf (win state)
 =======
   MinDistance: 1
 >>>>>>> parent of 75d75faf (win state)
@@ -4203,6 +4347,7 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!65 &8996232811631637932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4220,13 +4365,20 @@ BoxCollider:
 =======
 --- !u!114 &7986817728175554743
 >>>>>>> parent of 75d75faf (win state)
+=======
+--- !u!114 &7986817728175554743
+>>>>>>> parent of 75d75faf (win state)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_GameObject: {fileID: 5758416202819337366}
+=======
+  m_GameObject: {fileID: 135492005692669915}
+>>>>>>> parent of 75d75faf (win state)
 =======
   m_GameObject: {fileID: 135492005692669915}
 >>>>>>> parent of 75d75faf (win state)
@@ -4235,6 +4387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4f7d524c34b4f788d63182b54968da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4258,10 +4411,16 @@ GameObject:
 --- !u!65 &7986817728175554744
 BoxCollider:
 >>>>>>> parent of 75d75faf (win state)
+=======
+  doorAnimator: {fileID: 901670283}
+--- !u!65 &7986817728175554744
+BoxCollider:
+>>>>>>> parent of 75d75faf (win state)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   serializedVersion: 6
   m_Component:
@@ -4276,6 +4435,8 @@ BoxCollider:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 =======
+=======
+>>>>>>> parent of 75d75faf (win state)
   m_GameObject: {fileID: 135492005692669915}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -4283,4 +4444,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.48, y: 1.48, z: 2.18}
   m_Center: {x: 0, y: -0.26398307, z: 0}
+<<<<<<< HEAD
+>>>>>>> parent of 75d75faf (win state)
+=======
 >>>>>>> parent of 75d75faf (win state)
