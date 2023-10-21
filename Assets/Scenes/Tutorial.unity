@@ -1223,7 +1223,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1513ec3637ecb4046bcf125d1e52cb51, type: 2}
     - target: {fileID: 919132149155446097, guid: 80263d3cc5182493782ea65c60d79220, type: 3}
       propertyPath: m_Name
-      value: ' doll house'
+      value: house
       objectReference: {fileID: 0}
     - target: {fileID: 958691286036895283, guid: 80263d3cc5182493782ea65c60d79220, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2980,7 +2980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &630703876
 MonoBehaviour:
   m_ObjectHideFlags: 0
