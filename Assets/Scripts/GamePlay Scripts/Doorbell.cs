@@ -8,10 +8,16 @@ public class Doorbell : MonoBehaviour
     public Animator doorOpenAnimator;
     public Animator lookAnimator;
     public Animator ghostAnimator;
+    public Camera mainCamera;
+    public Camera camera2;
+
 
     void Start()
     {
         doorBellAudio = GetComponent<AudioSource>();
+        mainCamera.enabled = true;
+        camera2.enabled = false;
+
     }
 
     void Update()
@@ -42,11 +48,11 @@ public class Doorbell : MonoBehaviour
 
         StartCoroutine(Look());
         StartCoroutine(Ghost());
-
+        StartCoroutine(CameraSwitch());
 
     }
 
-        private IEnumerator Look()
+    private IEnumerator Look()
     {
         yield return new WaitForSeconds(.3f);
         GameObject character = GameObject.FindGameObjectWithTag("character");
@@ -73,5 +79,12 @@ public class Doorbell : MonoBehaviour
             Debug.Log("ghost animation");
         }
 
+    }
+
+    private IEnumerator CameraSwitch()
+    {
+        yield return new WaitForSeconds(8f);
+        mainCamera.enabled = false;
+        camera2.enabled = true;
     }
 }
