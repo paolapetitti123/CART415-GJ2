@@ -33,6 +33,11 @@ public class Doorbell : MonoBehaviour
     {
         Debug.Log("Door clicked");
         doorBellAudio.Play();
+
+        GameObject flashingGlow = GameObject.FindGameObjectWithTag("glow");
+        Animator flashingGlowAnim = flashingGlow.GetComponent<Animator>();
+
+        flashingGlowAnim.Play("Flashing-stop");
         StartCoroutine(DoorOpen());
     }
 
