@@ -5,6 +5,8 @@ using UnityEngine;
 public class Doorbell : MonoBehaviour
 {
     private AudioSource doorBellAudio;
+    public GameObject character;
+    public GameObject character2;
     public Animator doorOpenAnimator;
     public Animator lookAnimator;
     public Animator ghostAnimator;
@@ -17,6 +19,8 @@ public class Doorbell : MonoBehaviour
         doorBellAudio = GetComponent<AudioSource>();
         mainCamera.enabled = true;
         camera2.enabled = false;
+        character.SetActive(true);
+        character2.SetActive(false);
 
     }
 
@@ -86,5 +90,7 @@ public class Doorbell : MonoBehaviour
         yield return new WaitForSeconds(8f);
         mainCamera.enabled = false;
         camera2.enabled = true;
+        character.SetActive(false);
+        character2.SetActive(true);
     }
 }

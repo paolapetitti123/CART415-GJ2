@@ -8,6 +8,7 @@ TagManager:
   - character
   - ghost
   - camera2
+  - character2
   layers:
   - Default
   - TransparentFX
