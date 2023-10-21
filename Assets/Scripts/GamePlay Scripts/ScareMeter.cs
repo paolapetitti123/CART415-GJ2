@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ScareMeter : MonoBehaviour
 {
-    public Doorbell scare;
     public Image point1;
     public Image point2;
     public Image point3;
@@ -16,7 +15,6 @@ public class ScareMeter : MonoBehaviour
     public Image point8;
     public Image point9;
     public Image point10;
-    public bool isScared = false;
 
     // Start is called before the first frame update
     void Start()
@@ -40,18 +38,26 @@ public class ScareMeter : MonoBehaviour
         
     }
 
-    public void Scare()
-    {
-        
-    }
+  
 
-    public void losePoint()
+    public void ScareEvent()
     {
-        if (!isScared)
-        {
+        Debug.Log("in scare event");
+        
             point1.enabled = true;
 
+        if (point1.enabled == true)
+        {
+            Debug.Log("enabled");
+
         }
+        else
+        {
+            Debug.Log("not enabled");
+
+        }
+
+
     }
 
 

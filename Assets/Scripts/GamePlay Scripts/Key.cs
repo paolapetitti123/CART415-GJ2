@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Key : MonoBehaviour
 {
+    public ScareMeter scareMeter;
     public GameObject key;
     public Image keyImage;
     public GameObject character2;
@@ -36,15 +37,26 @@ public class Key : MonoBehaviour
 
     private IEnumerator Scare()
     {
-        key.SetActive(false);
+        Debug.Log("in scare");
         yield return new WaitForSeconds(.3f);
         GameObject character2 = GameObject.FindGameObjectWithTag("character2");
         Animator lookAnimator = character2.GetComponent<Animator>();
 
+
+
         if (character2 != null)
         {
+            Debug.Log("not null");
             lookAnimator.SetBool("isScared", true);
+            yield return new WaitForSeconds(4f);
+            character2.transform.Rotate(0f, 180f, 0.0f, Space.Self);
             Debug.Log("scare animation");
+            key.SetActive(false);
+
+            if (scareMeter != null)
+            {
+                scareMeter.ScareEvent();
+            }
 
         }
     }
