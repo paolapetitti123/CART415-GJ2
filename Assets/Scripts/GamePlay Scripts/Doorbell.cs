@@ -5,7 +5,9 @@ using UnityEngine;
 public class Doorbell : MonoBehaviour
 {
     private AudioSource doorBellAudio;
-    public Animator doorAnimator;
+    public Animator doorOpenAnimator;
+    public Animator lookAnimator;
+    public Animator ghostAnimator;
 
     void Start()
     {
@@ -26,29 +28,50 @@ public class Doorbell : MonoBehaviour
 
     private IEnumerator DoorOpen()
     {
+        Debug.Log("Door OPEN");
+
         yield return new WaitForSeconds(2f);
         GameObject door = GameObject.FindGameObjectWithTag("door");
-        Animator doorAnimator = door.GetComponent<Animator>();
+        Animator doorOpenAnimator = door.GetComponent<Animator>();
 
         if (door != null)
         {
-            doorAnimator.SetBool("door-open", true);
-            Debug.Log("Door animation");
+            doorOpenAnimator.SetBool("isOpen", true);
+            Debug.Log("Door open animation");
         }
 
-       // StartCoroutine(Look());
+        StartCoroutine(Look());
+        StartCoroutine(Ghost());
+
+
     }
 
-    private IEnumerator Look()
+        private IEnumerator Look()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.3f);
         GameObject character = GameObject.FindGameObjectWithTag("character");
         Animator lookAnimator = character.GetComponent<Animator>();
 
         if (character != null)
         {
-            lookAnimator.SetBool("isOpen", true);
+            lookAnimator.SetBool("Look", true);
             Debug.Log("Look animation");
         }
+    }
+
+    private IEnumerator Ghost()
+    {
+        Debug.Log("ghost enter");
+
+        yield return new WaitForSeconds(4f);
+        GameObject ghost = GameObject.FindGameObjectWithTag("ghost");
+        Animator ghostAnimator = ghost.GetComponent<Animator>();
+
+        if (ghost != null)
+        {
+            ghostAnimator.SetBool("isOpen", true);
+            Debug.Log("ghost animation");
+        }
+
     }
 }
