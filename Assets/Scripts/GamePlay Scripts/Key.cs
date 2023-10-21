@@ -7,6 +7,8 @@ public class Key : MonoBehaviour
 {
     public GameObject key;
     public Image keyImage;
+    public GameObject character2;
+    public bool isScared = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +27,25 @@ public class Key : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log("Key clicked");
-        key.SetActive(false);
         keyImage.enabled = true;
+        isScared = true;
 
+        StartCoroutine(Scare());
 
+    }
 
+    private IEnumerator Scare()
+    {
+        key.SetActive(false);
+        yield return new WaitForSeconds(.3f);
+        GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+        Animator lookAnimator = character2.GetComponent<Animator>();
+
+        if (character2 != null)
+        {
+            lookAnimator.SetBool("isScared", true);
+            Debug.Log("scare animation");
+
+        }
     }
 }

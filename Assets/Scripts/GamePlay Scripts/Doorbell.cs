@@ -7,6 +7,7 @@ public class Doorbell : MonoBehaviour
     private AudioSource doorBellAudio;
     public GameObject character;
     public GameObject character2;
+    public bool isScared = false;
     public Animator doorOpenAnimator;
     public Animator lookAnimator;
     public Animator ghostAnimator;
