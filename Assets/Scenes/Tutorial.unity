@@ -3130,6 +3130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorBell
       objectReference: {fileID: 0}
+    - target: {fileID: 6801818519548800277, guid: 4e692722be3cc462d8ab23bf62cb522d, type: 3}
+      propertyPath: m_TagString
+      value: glow
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5716681864270162303, guid: 4e692722be3cc462d8ab23bf62cb522d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4e692722be3cc462d8ab23bf62cb522d, type: 3}
@@ -3614,6 +3618,31 @@ RectTransform:
   m_AnchoredPosition: {x: -50, y: -1}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &964855181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6801818519548800277, guid: 4e692722be3cc462d8ab23bf62cb522d, type: 3}
+  m_PrefabInstance: {fileID: 761546640}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &964855185
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964855181}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87166c78c192d1c428d256c352d5e9d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &981770798
 GameObject:
   m_ObjectHideFlags: 0
