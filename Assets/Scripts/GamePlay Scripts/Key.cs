@@ -2,36 +2,65 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
-public class Key : MonoBehaviour
+public class Key : MonoBehaviour, IInventoryItem
 {
     public ScareMeter scareMeter;
     public GameObject key;
-    public Image keyImage;
+    public Camera camera2;
+    //public Image keyImage;
+    public Sprite _Image;
     public GameObject character2;
     public bool isScared = false;
 
     // Start is called before the first frame update
+
+    public string Name
+    {
+        get
+        {
+            return "keys";
+        }
+    }
+
+    public Sprite Image
+    {
+        get
+        {
+            return _Image;
+        }
+    }
+
     void Start()
     {
         key.SetActive(true);
-        keyImage.enabled = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (camera2.enabled)
+        {
+            key.GetComponent<BoxCollider>().enabled = true;
+
+        }
+        else
+        {
+            key.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 
-    private void OnMouseDown()
+    public void OnPickup()
     {
-        Debug.Log("Key clicked");
-        keyImage.enabled = true;
+        
+
         isScared = true;
 
         StartCoroutine(Scare());
+        //key.SetActive(false);
 
     }
 
