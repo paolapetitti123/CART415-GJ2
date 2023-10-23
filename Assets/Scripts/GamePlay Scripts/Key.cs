@@ -60,39 +60,15 @@ public class Key : MonoBehaviour, IInventoryItem
     public void OnPickup()
     {
 
-        isScared = true;
-        //key.SetActive(false);
- 
-        StartCoroutine(Scare());
-      
+        //isScared = true;
+        key.SetActive(false);
+
+        //StartCoroutine(Scare());
+
 
     }
 
-    private IEnumerator Scare()
-    {
-        Debug.Log("in scare");
-       // yield return new WaitForSeconds(.3f);
-        GameObject character2 = GameObject.FindGameObjectWithTag("character2");
-        Animator lookAnimator = character2.GetComponent<Animator>();
 
-
-
-        if (character2 != null)
-        {   key.SetActive(false);
-            Debug.Log("not null");
-            lookAnimator.SetBool("isScared", true);
-            yield return new WaitForSeconds(4f);
-            character2.transform.Rotate(0f, 180f, 0.0f, Space.Self);
-            Debug.Log("scare animation");
-            
-
-            if (scareMeter != null)
-            {
-                scareMeter.ScareEvent();
-            }
-
-        }
-    }
 
     public void OnDrop()
     {
@@ -104,10 +80,27 @@ public class Key : MonoBehaviour, IInventoryItem
             if (hit.collider.tag == "lock")
             {
                 Debug.Log("Hitting the lock");
+                keyAnimation.SetActive(true);
+                Animator keyAnimator = keyAnimation.GetComponent<Animator>();
+
+                GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+                Animator lookAnimator = character2.GetComponent<Animator>();
+
+                if (character2 != null)
+                {
+                    lookAnimator.SetBool("isScared", true);
+                    character2.transform.Rotate(0f, -45f, 0.0f, Space.Self);
+                    Debug.Log("scare animation");
+
+                    if (scareMeter != null)
+                    {
+                        scareMeter.ScareEvent();
+                    }
+
+                }
 
                 //TODO: Trigger lock animation, then have the scare coroutine happen
-                keyAnimation.SetActive(true);
-                
+            
 
                 /*
                 GameObject keyAnimator = GameObject.FindGameObjectWithTag("keyAnimParent");
