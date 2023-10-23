@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     private List<IInventoryItem> mItems = new List<IInventoryItem>();
 
     public event EventHandler<InventoryEventArgs> ItemAdded;
+    public event EventHandler<InventoryEventArgs> ItemRemoved;
 
     public float rayLength;
 
@@ -38,6 +39,33 @@ public class Inventory : MonoBehaviour
                         ItemAdded(this, new InventoryEventArgs(item));
                     }
                 }
+            }
+        }
+    }
+
+    public void RemoveItem(IInventoryItem item)
+    {
+        if (mItems.Contains(item))
+        {
+            mItems.Remove(item);
+
+            item.OnDrop();
+
+            
+            RaycastHit hit;
+            Ray rayMain = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if(Physics.Raycast(rayMain, out hit, rayLength, layerMask))
+            {
+                if(hit.collider != null)
+                {
+                    hit.collider.enabled = true;
+                }
+            }
+
+            if (ItemRemoved != null)
+            {
+                ItemRemoved(this, new InventoryEventArgs(item));
             }
         }
     }
