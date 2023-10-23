@@ -15,7 +15,7 @@ public class Key : MonoBehaviour, IInventoryItem
     public Sprite _Image;
     public GameObject character2;
     public bool isScared = false;
-
+    public GameObject[] flashingGlow; 
 
 
     // Start is called before the first frame update
@@ -40,6 +40,7 @@ public class Key : MonoBehaviour, IInventoryItem
     {
         key.SetActive(true);
         keyAnimation.SetActive(false);
+        flashingGlow = GameObject.FindGameObjectsWithTag("glowKeys");
 
     }
 
@@ -58,9 +59,10 @@ public class Key : MonoBehaviour, IInventoryItem
     }
 
     public void OnPickup()
-    {
-
+    { 
         //isScared = true;
+
+        StopFlashingAnimation();
         key.SetActive(false);
 
         //StartCoroutine(Scare());
@@ -68,6 +70,15 @@ public class Key : MonoBehaviour, IInventoryItem
 
     }
 
+    public void StopFlashingAnimation()
+    {
+        foreach(GameObject flashingKeys in flashingGlow)
+        {
+            Animator flashingGlowAnim = flashingKeys.GetComponent<Animator>();
+
+            flashingGlowAnim.Play("Flashing-stop");
+        }
+    }
 
 
     public void OnDrop()
@@ -99,17 +110,15 @@ public class Key : MonoBehaviour, IInventoryItem
 
                 }
 
+
+
                 //TODO: Trigger lock animation, then have the scare coroutine happen
-            
 
-                /*
-                GameObject keyAnimator = GameObject.FindGameObjectWithTag("keyAnimParent");
-                Animator keyAnim = keyAnimator.GetComponent<Animator>();
-
-
-                keyAnim.SetBool("KeyLocking", true);
-                keyAnim.Play("Key");
-                */
+            }
+            else
+            {
+                Debug.Log("Not hitting the lock");
+                transform.localPosition = Vector3.zero;
             }
             // key.SetActive(true);
             // key.transform.position = hit.point;

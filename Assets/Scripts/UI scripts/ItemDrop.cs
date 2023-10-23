@@ -16,10 +16,16 @@ public class ItemDrop : MonoBehaviour, IDropHandler
             Debug.Log("Item dropping");
             IInventoryItem item = eventData.pointerDrag.gameObject.GetComponent<ItemDrag>().Item;
 
-            if(item != null)
+            RaycastHit hit = new RaycastHit();
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit, 100))
             {
-                _Inventory.RemoveItem(item);
-                item.OnDrop();
+                if (item != null && hit.collider.tag == "lock")
+                {
+                    _Inventory.RemoveItem(item);
+                    item.OnDrop();
+                }
             }
         }
     }
