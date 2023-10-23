@@ -99,23 +99,26 @@ public class Key : MonoBehaviour, IInventoryItem
         RaycastHit hit = new RaycastHit();
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if(Physics.Raycast(ray, out hit, 100))
+        if (Physics.Raycast(ray, out hit, 100))
         {
-            if(hit.collider.tag == "lock")
+            if (hit.collider.tag == "lock")
             {
                 Debug.Log("Hitting the lock");
 
                 //TODO: Trigger lock animation, then have the scare coroutine happen
-               
-                GameObject keyAnimationParent = GameObject.FindGameObjectWithTag("keyAnimParent");
-                Animator keyAnim = keyAnimationParent.GetComponent<Animator>();
-
                 keyAnimation.SetActive(true);
+                
+
+                /*
+                GameObject keyAnimator = GameObject.FindGameObjectWithTag("keyAnimParent");
+                Animator keyAnim = keyAnimator.GetComponent<Animator>();
+
+
                 keyAnim.SetBool("KeyLocking", true);
                 keyAnim.Play("Key");
+                */
             }
-
-           // key.SetActive(true);
+            // key.SetActive(true);
             // key.transform.position = hit.point;
         }
     }
