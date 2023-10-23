@@ -11,6 +11,7 @@ TagManager:
   - character2
   - glow
   - InventoryPanel
+  - lock
   layers:
   - Default
   - TransparentFX

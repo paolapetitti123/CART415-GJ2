@@ -101,8 +101,13 @@ public class Key : MonoBehaviour, IInventoryItem
 
         if(Physics.Raycast(ray, out hit, 100))
         {
-            key.SetActive(true);
-            key.transform.position = hit.point;
+            if(hit.collider.tag == "lock")
+            {
+                Debug.Log("Hitting the lock");
+            }
+
+           // key.SetActive(true);
+            // key.transform.position = hit.point;
         }
     }
 }
