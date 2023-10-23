@@ -19,6 +19,7 @@ public class GameStateManager : MonoBehaviour
     public enum Scene
     {
         MainMenu,
+        Tutorial,
         GamePlay,
         GameWin,
         GameOver
