@@ -1331,6 +1331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scareMeter: {fileID: 1728906861}
   key: {fileID: 564022506}
+  keyAnimation: {fileID: 1972186372}
   camera2: {fileID: 1821188822}
   _Image: {fileID: 21300000, guid: 17693c4af426645cf928fc267d4bac29, type: 3}
   character2: {fileID: 1856834183}
@@ -3370,7 +3371,7 @@ GameObject:
   - component: {fileID: 1465345665}
   m_Layer: 0
   m_Name: key animation
-  m_TagString: Untagged
+  m_TagString: keyAnimParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5745,11 +5746,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f6faf0b68844c4227ade4d02447359ce, type: 3}
       propertyPath: m_Name
-      value: keys (1)
+      value: keys-animation
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f6faf0b68844c4227ade4d02447359ce, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f6faf0b68844c4227ade4d02447359ce, type: 3}
+      propertyPath: m_TagString
+      value: keyAnim
       objectReference: {fileID: 0}
     - target: {fileID: 2731437729529063768, guid: f6faf0b68844c4227ade4d02447359ce, type: 3}
       propertyPath: m_LocalPosition.x

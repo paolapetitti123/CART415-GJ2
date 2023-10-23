@@ -12,6 +12,8 @@ TagManager:
   - glow
   - InventoryPanel
   - lock
+  - keyAnim
+  - keyAnimParent
   layers:
   - Default
   - TransparentFX

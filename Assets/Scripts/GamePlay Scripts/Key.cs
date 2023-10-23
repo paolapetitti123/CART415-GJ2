@@ -9,11 +9,14 @@ public class Key : MonoBehaviour, IInventoryItem
 {
     public ScareMeter scareMeter;
     public GameObject key;
+    public GameObject keyAnimation;
     public Camera camera2;
     //public Image keyImage;
     public Sprite _Image;
     public GameObject character2;
     public bool isScared = false;
+
+
 
     // Start is called before the first frame update
 
@@ -36,6 +39,7 @@ public class Key : MonoBehaviour, IInventoryItem
     void Start()
     {
         key.SetActive(true);
+        keyAnimation.SetActive(false);
 
     }
 
@@ -58,11 +62,7 @@ public class Key : MonoBehaviour, IInventoryItem
 
         isScared = true;
         //key.SetActive(false);
-        /* TODO: 1. make keys disappear
-         *       2. play keys pickup sound (maybe)
-         *       3. when the key hits the look, trigger the lock animation
-         *       4. trigger character scare animation either while or after lock animation
-         */
+ 
         StartCoroutine(Scare());
       
 
@@ -104,6 +104,15 @@ public class Key : MonoBehaviour, IInventoryItem
             if(hit.collider.tag == "lock")
             {
                 Debug.Log("Hitting the lock");
+
+                //TODO: Trigger lock animation, then have the scare coroutine happen
+               
+                GameObject keyAnimationParent = GameObject.FindGameObjectWithTag("keyAnimParent");
+                Animator keyAnim = keyAnimationParent.GetComponent<Animator>();
+
+                keyAnimation.SetActive(true);
+                keyAnim.SetBool("KeyLocking", true);
+                keyAnim.Play("Key");
             }
 
            // key.SetActive(true);
