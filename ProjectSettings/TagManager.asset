@@ -15,6 +15,9 @@ TagManager:
   - keyAnim
   - keyAnimParent
   - glowKeys
+  - deathCamera
+  - death
+  - graveCamera
   layers:
   - Default
   - TransparentFX
