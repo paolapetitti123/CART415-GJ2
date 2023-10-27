@@ -41,7 +41,11 @@ public class Key : MonoBehaviour, IInventoryItem
         key.SetActive(true);
         keyAnimation.SetActive(false);
         flashingGlow = GameObject.FindGameObjectsWithTag("glowKeys");
+        GameObject keyLock = GameObject.FindGameObjectWithTag("lock");
+        Animator lockFlash = keyLock.GetComponent<Animator>();
 
+        lockFlash.Play("Flashing-stop");
+        //lockFlash.enabled = false;
     }
 
     // Update is called once per frame
@@ -65,6 +69,11 @@ public class Key : MonoBehaviour, IInventoryItem
         StopFlashingAnimation();
         key.SetActive(false);
 
+        GameObject keyLock = GameObject.FindGameObjectWithTag("lock");
+        Animator lockFlash = keyLock.GetComponent<Animator>();
+
+        lockFlash.enabled = true;
+        lockFlash.Play("Flashing-start-reverse");
         //StartCoroutine(Scare());
 
 
@@ -97,6 +106,11 @@ public class Key : MonoBehaviour, IInventoryItem
 
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
                 Animator lookAnimator = character2.GetComponent<Animator>();
+
+                GameObject keyLock = GameObject.FindGameObjectWithTag("lock");
+                Animator lockFlash = keyLock.GetComponent<Animator>();
+
+                lockFlash.Play("Flashing-stop");
 
                 if (character2 != null)
                 {
