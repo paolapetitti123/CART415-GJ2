@@ -15,8 +15,8 @@ public class Key : MonoBehaviour, IInventoryItem
     public Sprite _Image;
     public GameObject character2;
     public bool isScared = false;
-    public GameObject[] flashingGlow; 
-
+    public GameObject[] flashingGlow;
+    public GameObject arrow;
 
     // Start is called before the first frame update
 
@@ -59,9 +59,9 @@ public class Key : MonoBehaviour, IInventoryItem
     }
 
     public void OnPickup()
-    { 
+    {
         //isScared = true;
-
+        arrow.SetActive(true);
         StopFlashingAnimation();
         key.SetActive(false);
 
@@ -90,6 +90,7 @@ public class Key : MonoBehaviour, IInventoryItem
         {
             if (hit.collider.tag == "lock")
             {
+                arrow.SetActive(false);
                 Debug.Log("Hitting the lock");
                 keyAnimation.SetActive(true);
                 Animator keyAnimator = keyAnimation.GetComponent<Animator>();
