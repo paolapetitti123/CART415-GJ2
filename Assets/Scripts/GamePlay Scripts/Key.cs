@@ -106,7 +106,7 @@ public class Key : MonoBehaviour, IInventoryItem
                 arrow.SetActive(false);
                 Debug.Log("Hitting the lock");
                 keyAnimation.SetActive(true);
-                Animator keyAnimator = keyAnimation.GetComponent<Animator>();
+
 
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
                 Animator lookAnimator = character2.GetComponent<Animator>();
@@ -128,6 +128,7 @@ public class Key : MonoBehaviour, IInventoryItem
                     }
 
                 }
+                
             }
             else
             {
@@ -137,4 +138,7 @@ public class Key : MonoBehaviour, IInventoryItem
 
         }
     }
+
+
+
 }
