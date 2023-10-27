@@ -14,9 +14,11 @@ public class Key : MonoBehaviour, IInventoryItem
     //public Image keyImage;
     public Sprite _Image;
     public GameObject character2;
-    public bool isScared = false;
     public GameObject[] flashingGlow;
     public GameObject arrow;
+    public AudioSource keyPickUpAudio;
+    public bool isScared = false;
+
 
     // Start is called before the first frame update
 
@@ -38,6 +40,8 @@ public class Key : MonoBehaviour, IInventoryItem
 
     void Start()
     {
+        keyPickUpAudio.GetComponent<AudioSource>();
+
         key.SetActive(true);
         keyAnimation.SetActive(false);
         flashingGlow = GameObject.FindGameObjectsWithTag("glowKeys");
@@ -64,7 +68,7 @@ public class Key : MonoBehaviour, IInventoryItem
 
     public void OnPickup()
     {
-        //isScared = true;
+        keyPickUpAudio.Play();
         arrow.SetActive(true);
         StopFlashingAnimation();
         key.SetActive(false);
