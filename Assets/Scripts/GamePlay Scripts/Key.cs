@@ -128,19 +128,13 @@ public class Key : MonoBehaviour, IInventoryItem
                     }
 
                 }
-
-
-
-                //TODO: Trigger lock animation, then have the scare coroutine happen
-
             }
             else
             {
                 Debug.Log("Not hitting the lock");
                 transform.localPosition = Vector3.zero;
             }
-            // key.SetActive(true);
-            // key.transform.position = hit.point;
+
         }
     }
 }
