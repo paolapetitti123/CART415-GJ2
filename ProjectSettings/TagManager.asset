@@ -19,6 +19,7 @@ TagManager:
   - death
   - graveCamera
   - houseCamera
+  - ghostHouse
   layers:
   - Default
   - TransparentFX
