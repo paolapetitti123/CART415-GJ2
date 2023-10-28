@@ -36,9 +36,8 @@ public class Intro : MonoBehaviour
         }
 
         StartCoroutine(DeathCam());
-
-   
     }
+
     private IEnumerator DeathCam()
     {
         yield return new WaitForSeconds(1f);
