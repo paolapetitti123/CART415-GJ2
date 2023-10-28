@@ -72,7 +72,7 @@ public class Intro : MonoBehaviour
 
     private IEnumerator HouseCam()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         GameObject ghost = GameObject.FindGameObjectWithTag("ghostHouse");
         Animator ghostAnimator = ghost.GetComponent<Animator>();
 
@@ -86,13 +86,14 @@ public class Intro : MonoBehaviour
         graveCamera.enabled = false;
         houseCamera.enabled = true;
 
-
+        StartCoroutine(StartTutorial());
     }
 
-
-    // Update is called once per frame
-    void Update()
+    private IEnumerator StartTutorial()
     {
-        
+        yield return new WaitForSeconds(4f);
+
+        GameStateManager.Instance.LoadScene(GameStateManager.Scene.Tutorial);
     }
+
 }

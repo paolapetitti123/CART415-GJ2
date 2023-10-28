@@ -21,6 +21,6 @@ public class MainMenuUI : MonoBehaviour
 
     private void startGame()
     {
-        GameStateManager.Instance.LoadScene(GameStateManager.Scene.Tutorial);
+        GameStateManager.Instance.LoadScene(GameStateManager.Scene.Intro);
     }
 }
