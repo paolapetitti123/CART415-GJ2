@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hacksaw : MonoBehaviour, IInventoryItem
 {
     public Sprite _Image = null;
+    
 
     public string Name
     {
@@ -35,7 +36,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame

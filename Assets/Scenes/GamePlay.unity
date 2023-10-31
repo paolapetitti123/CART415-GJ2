@@ -42733,7 +42733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7016479160966718900
 Transform:
   m_ObjectHideFlags: 0
@@ -45257,7 +45257,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8761865744148779387}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 864406b94ccea2f41b456c206c1507d7, type: 2}
   m_CullingMode: 0
@@ -45295,6 +45295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Image: {fileID: 21300000, guid: 00e5d353e34f892499ce66c2de94466e, type: 3}
+  toolBox: {fileID: 6496640991933927400}
+  toolBoxOpenAnimation: {fileID: 0}
 --- !u!33 &8765610912561504258
 MeshFilter:
   m_ObjectHideFlags: 0
