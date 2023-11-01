@@ -124,7 +124,7 @@ public class Key : MonoBehaviour, IInventoryItem
 
                     if (scareMeter != null)
                     {
-                        scareMeter.ScareEvent();
+                        scareMeter.TutorialScareEvent();
                     }
 
                 }
