@@ -6,12 +6,15 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
 {
     public Sprite _Image = null;
     public ScareMeter scareMeter;
+    public GameObject hacksaw;
+    public GameObject chandelier;
+
 
     public string Name
     {
         get
         {
-            return "hacksaw";
+            return "Hacksaw";
         }
     }
 
@@ -21,6 +24,19 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         {
             return _Image;
         }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        scareMeter.point1.enabled = true;
+        scareMeter.counter = 1;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
     public void OnPickup()
@@ -37,7 +53,14 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         {
             if (hit.collider.tag == "chandelier")
             {
+
+                gameObject.SetActive(true);
+
+                StartCoroutine(cutHacksaw());
+                
+
               
+
                 Debug.Log("Hitting the chandelier");
                 
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
@@ -69,17 +92,36 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private IEnumerator cutHacksaw()
     {
-        scareMeter.point1.enabled = true;
-        scareMeter.counter = 1;
+        yield return new WaitForSeconds(0f);
+
+
+        if (hacksaw != null && hacksaw.activeInHierarchy == true)
+        {
+            hacksaw.GetComponent<Animator>().Play("hacksaw-inUse");
+            hacksaw.GetComponent<BoxCollider>().enabled = true;
+            StartCoroutine(Fall());
+            Debug.Log("cutting the chandelier");
+
+
+        }
+        else if (hacksaw.activeInHierarchy == false)
+        {
+            hacksaw.GetComponent<Animator>().enabled = false;
+        }
+    }
+    private IEnumerator Fall()
+    {
+        yield return new WaitForSeconds(2f);
+        hacksaw.SetActive(false);
+        Animator chandelierAnimator = chandelier.GetComponent<Animator>();
+        chandelierAnimator.SetBool("isCut", true);
+        Debug.Log("falling chandelier");
+
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 }

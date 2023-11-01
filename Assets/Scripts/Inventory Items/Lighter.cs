@@ -56,8 +56,8 @@ public class Lighter : MonoBehaviour, IInventoryItem
             if (hit.collider.tag == "candle")
             {
                 Invoke("Curtain", 2.0f);
-                Animator curtainAnimtor = curtain.GetComponent<Animator>();
-                curtainAnimtor.SetBool("isLit", true);
+                Animator curtainAnimator = curtain.GetComponent<Animator>();
+                curtainAnimator.SetBool("isLit", true);
 
                 //StartCoroutine(Remove());
 

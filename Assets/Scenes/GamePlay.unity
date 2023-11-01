@@ -21842,7 +21842,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dd0c7a39972254b98b837e82fca2390d, type: 2}
     - target: {fileID: 919132149155446097, guid: ec2a4ac8bb6b94a748e75f5a21be5e29, type: 3}
       propertyPath: m_Name
-      value: ChandalierBlockout
+      value: Chandelier
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ec2a4ac8bb6b94a748e75f5a21be5e29, type: 3}
       propertyPath: m_TagString
@@ -85204,6 +85204,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Image: {fileID: 21300000, guid: 00e5d353e34f892499ce66c2de94466e, type: 3}
   scareMeter: {fileID: 439226047}
+  hacksaw: {fileID: 8761865744148779387}
+  chandelier: {fileID: 1982214258}
 --- !u!33 &8765610912561504258
 MeshFilter:
   m_ObjectHideFlags: 0
