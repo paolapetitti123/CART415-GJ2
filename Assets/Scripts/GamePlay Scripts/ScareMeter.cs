@@ -40,6 +40,12 @@ public class ScareMeter : MonoBehaviour
         
     }
 
+    public void ScareCount()
+    {
+        Debug.Log("counter: " + counter);
+        ScareEvent(counter + 1);
+    }
+
     public void TutorialScareEvent()
     {
         Debug.Log("in scare event");
@@ -60,52 +66,52 @@ public class ScareMeter : MonoBehaviour
 
 
  
-    public void ScareEvent()
+    public void ScareEvent(int count)
     {
         Debug.Log("in scare event");
         
-        if(counter == 1)
+        if(count == 2)
         {
             point2.enabled = true;
-            counter = 2;
+            
         
         }
-        else if(counter == 2)
+        else if(counter == 3)
         {
             point3.enabled = true;
-            counter = 3;
-        }
-        else if (counter == 3)
-        {
-            point4.enabled = true;
-            counter = 4;
+            
         }
         else if (counter == 4)
         {
-            point5.enabled = true;
-            counter = 5;
+            point4.enabled = true;
+            
         }
         else if (counter == 5)
         {
-            point6.enabled = true;
-            counter = 6;
+            point5.enabled = true;
+            
         }
         else if (counter == 6)
         {
-            point7.enabled = true;
-            counter = 7;
+            point6.enabled = true;
+            
         }
         else if (counter == 7)
         {
-            point8.enabled = true;
-            counter = 8;
+            point7.enabled = true;
+            
         }
         else if (counter == 8)
         {
-            point9.enabled = true;
-            counter = 9;
+            point8.enabled = true;
+            
         }
         else if (counter == 9)
+        {
+            point9.enabled = true;
+            
+        }
+        else if (counter == 10)
         {
             point10.enabled = true;
 

@@ -53,8 +53,8 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
 
                     if (scareMeter != null)
                     {
-                        scareMeter.ScareEvent();
-
+                        scareMeter.ScareCount(); 
+                        
                     }
 
                 }
