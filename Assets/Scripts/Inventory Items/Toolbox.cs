@@ -5,12 +5,14 @@ using UnityEngine;
 public class Toolbox : MonoBehaviour
 {
     public GameObject toolBox;
+    public GameObject hacksaw;
 
     // Start is called before the first frame update
     void Start()
     {
         toolBox.SetActive(true);
-       
+        hacksaw.GetComponent<BoxCollider>().enabled = false;
+
     }
 
     // Update is called once per frame
@@ -32,12 +34,15 @@ public class Toolbox : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        GameObject hacksaw = GameObject.FindGameObjectWithTag("hacksaw");
-        Animator hacksawAnimator = hacksaw.GetComponent<Animator>();
 
-        if(hacksaw != null)
+        if(hacksaw != null && hacksaw.activeInHierarchy == true)
         {
-            hacksawAnimator.Play("hacksaw-show");
+            hacksaw.GetComponent<Animator>().Play("hacksaw-show");
+            hacksaw.GetComponent<BoxCollider>().enabled = true;
+        }
+        else if(hacksaw.activeInHierarchy == false)
+        {
+            hacksaw.GetComponent<Animator>().enabled = false;
         }
     }
 }

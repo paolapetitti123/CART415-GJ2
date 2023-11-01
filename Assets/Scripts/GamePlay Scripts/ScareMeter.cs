@@ -16,6 +16,8 @@ public class ScareMeter : MonoBehaviour
     public Image point9;
     public Image point10;
 
+    public int counter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class ScareMeter : MonoBehaviour
         point8.enabled = false;
         point9.enabled = false;
         point10.enabled = false;
-
+        counter = 0;
     }
 
     // Update is called once per frame
@@ -38,26 +40,77 @@ public class ScareMeter : MonoBehaviour
         
     }
 
-  
-
-    public void ScareEvent()
+    public void TutorialScareEvent()
     {
         Debug.Log("in scare event");
-        
-            point1.enabled = true;
+
+        point1.enabled = true;
 
         if (point1.enabled == true)
         {
             Debug.Log("enabled");
-
+            counter++;
         }
         else
         {
             Debug.Log("not enabled");
 
         }
+    }
 
 
+ 
+    public void ScareEvent()
+    {
+        Debug.Log("in scare event");
+        
+        if(counter == 1)
+        {
+            point2.enabled = true;
+            counter = 2;
+        
+        }
+        else if(counter == 2)
+        {
+            point3.enabled = true;
+            counter = 3;
+        }
+        else if (counter == 3)
+        {
+            point4.enabled = true;
+            counter = 4;
+        }
+        else if (counter == 4)
+        {
+            point5.enabled = true;
+            counter = 5;
+        }
+        else if (counter == 5)
+        {
+            point6.enabled = true;
+            counter = 6;
+        }
+        else if (counter == 6)
+        {
+            point7.enabled = true;
+            counter = 7;
+        }
+        else if (counter == 7)
+        {
+            point8.enabled = true;
+            counter = 8;
+        }
+        else if (counter == 8)
+        {
+            point9.enabled = true;
+            counter = 9;
+        }
+        else if (counter == 9)
+        {
+            point10.enabled = true;
+
+            // Game win
+        }
     }
 
 

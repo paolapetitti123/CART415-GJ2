@@ -13,19 +13,45 @@ public class ItemDrop : MonoBehaviour, IDropHandler
 
         if(!RectTransformUtility.RectangleContainsScreenPoint(invPanel, Input.mousePosition))
         {
-            Debug.Log("Item dropping");
+            
             IInventoryItem item = eventData.pointerDrag.gameObject.GetComponent<ItemDrag>().Item;
 
             RaycastHit hit = new RaycastHit();
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+            Debug.Log(item.Name + " dropping");
+
             if (Physics.Raycast(ray, out hit, 100))
             {
-                if (item != null && hit.collider.tag == "lock")
+                if(item != null)
                 {
-                    _Inventory.RemoveItem(item);
-                    item.OnDrop();
+                    // tutorial
+                    if(hit.collider.tag == "lock" && item.Name == "keys")
+                    {
+                        _Inventory.RemoveItem(item);
+                        item.OnDrop();
+                    }
+                    // living room
+                    else if (hit.collider.tag == "chandelier" && item.Name == "hacksaw")
+                    {
+                        _Inventory.RemoveItem(item);
+                        item.OnDrop();
+                    }
+                    else if (hit.collider.tag == "candle" && item.Name == "zippo-lighter")
+                    {
+                        _Inventory.RemoveItem(item);
+                        item.OnDrop();
+                    }
+                    else if (hit.collider.tag == "tv" && item.Name == "Cup of water")
+                    {
+                        _Inventory.RemoveItem(item);
+                        item.OnDrop();
+                    }
+
+                    // next room
+                    // next room
                 }
+                
             }
         }
     }
