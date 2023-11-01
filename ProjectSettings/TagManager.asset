@@ -22,6 +22,8 @@ TagManager:
   - ghostHouse
   - hacksaw
   - chandelier
+  - tv
+  - candle
   layers:
   - Default
   - TransparentFX

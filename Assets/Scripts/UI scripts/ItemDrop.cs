@@ -19,7 +19,7 @@ public class ItemDrop : MonoBehaviour, IDropHandler
             RaycastHit hit = new RaycastHit();
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            Debug.Log(item.Name + " dropping");
+            Debug.Log(item.Name + " dropping from inventory");
 
             if (Physics.Raycast(ray, out hit, 100))
             {
@@ -32,12 +32,12 @@ public class ItemDrop : MonoBehaviour, IDropHandler
                         item.OnDrop();
                     }
                     // living room
-                    else if (hit.collider.tag == "chandelier" && item.Name == "hacksaw")
+                    else if (hit.collider.tag == "chandelier" && item.Name == "Hacksaw")
                     {
                         _Inventory.RemoveItem(item);
                         item.OnDrop();
                     }
-                    else if (hit.collider.tag == "candle" && item.Name == "zippo-lighter")
+                    else if (hit.collider.tag == "candle" && item.Name == "Lighter")
                     {
                         _Inventory.RemoveItem(item);
                         item.OnDrop();

@@ -72,47 +72,83 @@ public class ScareMeter : MonoBehaviour
         
         if(count == 2)
         {
+            //    point2.enabled = true;
+
+
+            //}
+            //else if(counter == 3)
+            //{
+            //    point2.enabled = true;
+            //    point3.enabled = true;
+
+            //}
+            //else if (counter == 4)
+            //{
             point2.enabled = true;
-            
-        
-        }
-        else if(counter == 3)
-        {
             point3.enabled = true;
+            point4.enabled = true;
+            
+        }
+        else if (counter == 3)
+        {
+        //    point2.enabled = true;
+        //    point3.enabled = true;
+        //    point4.enabled = true;
+        //    point5.enabled = true;
+            
+        //}
+        //else if (counter == 6)
+        //{
+        //    point2.enabled = true;
+        //    point3.enabled = true;
+        //    point4.enabled = true;
+        //    point5.enabled = true;
+        //    point6.enabled = true;
+            
+        //}
+        //else if (counter == 7)
+        //{
+            point2.enabled = true;
+            point3.enabled = true;
+            point4.enabled = true;
+            point5.enabled = true;
+            point6.enabled = true;
+            point7.enabled = true;
             
         }
         else if (counter == 4)
         {
+        //    point2.enabled = true;
+        //    point3.enabled = true;
+        //    point4.enabled = true;
+        //    point5.enabled = true;
+        //    point6.enabled = true;
+        //    point7.enabled = true;
+        //    point8.enabled = true;
+            
+        //}
+        //else if (counter == 9)
+        //{
+        //    point2.enabled = true;
+        //    point3.enabled = true;
+        //    point4.enabled = true;
+        //    point5.enabled = true;
+        //    point6.enabled = true;
+        //    point7.enabled = true;
+        //    point8.enabled = true;
+        //    point9.enabled = true;
+            
+        //}
+        //else if (counter == 10)
+        //{
+            point2.enabled = true;
+            point3.enabled = true;
             point4.enabled = true;
-            
-        }
-        else if (counter == 5)
-        {
             point5.enabled = true;
-            
-        }
-        else if (counter == 6)
-        {
             point6.enabled = true;
-            
-        }
-        else if (counter == 7)
-        {
             point7.enabled = true;
-            
-        }
-        else if (counter == 8)
-        {
             point8.enabled = true;
-            
-        }
-        else if (counter == 9)
-        {
             point9.enabled = true;
-            
-        }
-        else if (counter == 10)
-        {
             point10.enabled = true;
 
             // Game win

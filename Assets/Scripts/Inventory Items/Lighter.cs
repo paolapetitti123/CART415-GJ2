@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hacksaw : MonoBehaviour, IInventoryItem
+public class Lighter : MonoBehaviour, IInventoryItem
 {
     public Sprite _Image = null;
+    public GameObject candleFire;
+    public GameObject curtainFire;
+    public GameObject curtain;
     public ScareMeter scareMeter;
 
     public string Name
     {
         get
         {
-            return "hacksaw";
+            return "Lighter";
         }
     }
 
@@ -21,6 +24,21 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         {
             return _Image;
         }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        curtainFire.SetActive(false);
+        candleFire.SetActive(false);
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
     public void OnPickup()
@@ -35,51 +53,56 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
 
         if (Physics.Raycast(ray, out hit, 10000))
         {
-            if (hit.collider.tag == "chandelier")
+            if (hit.collider.tag == "candle")
             {
-              
-                Debug.Log("Hitting the chandelier");
-                
+                Invoke("Curtain", 2.0f);
+                Animator curtainAnimtor = curtain.GetComponent<Animator>();
+                curtainAnimtor.SetBool("isLit", true);
+
+                //StartCoroutine(Remove());
+
+                Debug.Log("Tag foud. Hitting the candle");
+                candleFire.SetActive(true);
+
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
                 Animator characterAnimator = character2.GetComponent<Animator>();
 
-                // add animator for chandelier
-                
+                // add animator for tv
+
                 if (character2 != null)
                 {
                     // trigger character animation when chandelier falls
 
-                    Debug.Log("scare animation");
+                    Debug.Log("scare animation for candle");
 
                     if (scareMeter != null)
                     {
-                        scareMeter.ScareCount(); 
-                        
+                        scareMeter.ScareCount();
+                        scareMeter.counter++;
+                       
+
+
                     }
 
                 }
 
+
             }
             else
             {
-                Debug.Log("Not hitting the chandelier");
+                Debug.Log("Not hitting the candle");
                 transform.localPosition = Vector3.zero;
             }
 
         }
+
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void Curtain()
     {
-        scareMeter.point1.enabled = true;
-        scareMeter.counter = 1;
+        curtainFire.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
 }
