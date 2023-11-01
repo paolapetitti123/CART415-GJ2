@@ -114,10 +114,11 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     private IEnumerator Fall()
     {
         yield return new WaitForSeconds(2f);
-        hacksaw.SetActive(false);
         Animator chandelierAnimator = chandelier.GetComponent<Animator>();
         chandelierAnimator.SetBool("isCut", true);
         Debug.Log("falling chandelier");
+        hacksaw.SetActive(false);
+
 
 
 
