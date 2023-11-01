@@ -261,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 489884, guid: 92836ed989c97eb4eb5f2800133b76a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.9
+      value: -6.900009
       objectReference: {fileID: 0}
     - target: {fileID: 489884, guid: 92836ed989c97eb4eb5f2800133b76a4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -269,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 489884, guid: 92836ed989c97eb4eb5f2800133b76a4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.193125
+      value: 8.193113
       objectReference: {fileID: 0}
     - target: {fileID: 489884, guid: 92836ed989c97eb4eb5f2800133b76a4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -582,9 +582,9 @@ RectTransform:
   m_Father: {fileID: 411339984}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 350, y: -50}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216551458
@@ -785,9 +785,9 @@ RectTransform:
   m_Father: {fileID: 411339984}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &295066047
@@ -1615,6 +1615,7 @@ MonoBehaviour:
   point8: {fileID: 2086736292}
   point9: {fileID: 1269096309}
   point10: {fileID: 1516881881}
+  counter: 0
 --- !u!114 &439226048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4351,9 +4352,9 @@ RectTransform:
   m_Father: {fileID: 411339984}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -50}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1417395230
@@ -5425,6 +5426,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcb7c038274a8ae4289f34acb6cd5e86, type: 3}
+      propertyPath: m_TagString
+      value: character2
+      objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: dcb7c038274a8ae4289f34acb6cd5e86, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5630,6 +5635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChandalierBlockout
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ec2a4ac8bb6b94a748e75f5a21be5e29, type: 3}
+      propertyPath: m_TagString
+      value: chandelier
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec2a4ac8bb6b94a748e75f5a21be5e29, type: 3}
 --- !u!1 &1900359646
@@ -5751,11 +5760,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982214258}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.070290655, y: 0.08127915, z: 0.06957052}
-  m_Center: {x: -0.0004676692, y: 0, z: 0.000263093}
+  m_Size: {x: 0.10848275, y: 0.08924601, z: 0.17522706}
+  m_Center: {x: -0.0004676692, y: -0.0039834264, z: -0.012635899}
 --- !u!1001 &1984125455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6085,9 +6094,9 @@ RectTransform:
   m_Father: {fileID: 411339984}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -50}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044317866
@@ -41828,6 +41837,7 @@ GameObject:
   - component: {fileID: 2670604469761359056}
   - component: {fileID: 9040568022602582827}
   - component: {fileID: 9040568022602582828}
+  - component: {fileID: 9040568022602582829}
   m_Layer: 0
   m_Name: ToolBox_Lid
   m_TagString: Untagged
@@ -45244,7 +45254,7 @@ GameObject:
   - component: {fileID: 8761865744148779389}
   m_Layer: 7
   m_Name: hacksaw-obj
-  m_TagString: Untagged
+  m_TagString: hacksaw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45257,7 +45267,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8761865744148779387}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 864406b94ccea2f41b456c206c1507d7, type: 2}
   m_CullingMode: 0
@@ -45278,7 +45288,7 @@ BoxCollider:
   m_GameObject: {fileID: 8761865744148779387}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 9.853683, y: 7.518302, z: 46.87326}
   m_Center: {x: -2.096, y: -0.9169305, z: 30.113564}
@@ -45295,8 +45305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _Image: {fileID: 21300000, guid: 00e5d353e34f892499ce66c2de94466e, type: 3}
-  toolBox: {fileID: 6496640991933927400}
-  toolBoxOpenAnimation: {fileID: 0}
+  scareMeter: {fileID: 439226047}
 --- !u!33 &8765610912561504258
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45803,7 +45812,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6496640991933927400}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bfead077cedffbb4f97dc78874631c44, type: 2}
   m_CullingMode: 0
@@ -45828,6 +45837,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6712489, y: 0.2761482, z: 0.30673805}
   m_Center: {x: 0.035088655, y: -0.058988713, z: -0.028779864}
+--- !u!114 &9040568022602582829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496640991933927400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c600050f61216340825975c186647f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolBox: {fileID: 6496640991933927400}
+  hacksaw: {fileID: 8761865744148779387}
 --- !u!4 &9068539834596959012
 Transform:
   m_ObjectHideFlags: 0
