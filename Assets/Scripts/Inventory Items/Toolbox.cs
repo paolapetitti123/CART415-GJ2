@@ -26,6 +26,7 @@ public class Toolbox : MonoBehaviour
         Animator toolBoxOpen = toolBox.GetComponent<Animator>();
 
         toolBoxOpen.Play("open-toolbox");
+        gameObject.GetComponent<AudioSource>().Play();
 
         StartCoroutine(showHacksaw());
     }
