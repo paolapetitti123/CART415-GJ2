@@ -57,9 +57,6 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
                 gameObject.SetActive(true);
 
                 StartCoroutine(cutHacksaw());
-                
-
-              
 
                 Debug.Log("Hitting the chandelier");
                 
@@ -99,6 +96,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
 
         if (hacksaw != null && hacksaw.activeInHierarchy == true)
         {
+            hacksaw.GetComponent<Animator>().enabled = true;
             hacksaw.GetComponent<Animator>().Play("hacksaw-inUse");
             hacksaw.GetComponent<BoxCollider>().enabled = true;
             StartCoroutine(Fall());
@@ -106,14 +104,15 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
 
 
         }
-        else if (hacksaw.activeInHierarchy == false)
+        else if (hacksaw != null && hacksaw.activeInHierarchy == false)
         {
-            hacksaw.GetComponent<Animator>().enabled = false;
+            //hacksaw.GetComponent<BoxCollider>().enabled = false;
+           // hacksaw.GetComponent<Animator>().enabled = false;
         }
     }
     private IEnumerator Fall()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.8f);
         Animator chandelierAnimator = chandelier.GetComponent<Animator>();
         chandelierAnimator.SetBool("isCut", true);
         Debug.Log("falling chandelier");

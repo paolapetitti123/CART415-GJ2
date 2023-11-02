@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f1a408efc652900469d01098b969b5c7
+guid: d123e1b813cb8bf4f8436f2917e30061
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -62,18 +62,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: sitting-idle
+      name: reacting-standing
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 129
+      lastFrame: 110
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

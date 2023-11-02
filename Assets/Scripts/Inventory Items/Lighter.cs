@@ -65,9 +65,9 @@ public class Lighter : MonoBehaviour, IInventoryItem
                 candleFire.SetActive(true);
 
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
-                Animator characterAnimator = character2.GetComponent<Animator>();
+                //Animator characterAnimator = character2.GetComponent<Animator>();
 
-                // add animator for tv
+                
 
                 if (character2 != null)
                 {
@@ -79,9 +79,6 @@ public class Lighter : MonoBehaviour, IInventoryItem
                     {
                         scareMeter.ScareCount();
                         scareMeter.counter++;
-                       
-
-
                     }
 
                 }

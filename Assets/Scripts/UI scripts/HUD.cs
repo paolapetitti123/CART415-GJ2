@@ -50,7 +50,6 @@ public class HUD : MonoBehaviour
 
             if (itemDragHandler.Item.Equals(e.Item))
             {
-                
                 image.enabled = false;
                 image.sprite = null;
                 itemDragHandler.Item = null;
