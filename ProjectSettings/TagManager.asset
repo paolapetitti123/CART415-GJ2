@@ -24,6 +24,10 @@ TagManager:
   - chandelier
   - tv
   - candle
+  - tvWorking
+  - tvBroken
+  - vpWorking
+  - vpBroken
   layers:
   - Default
   - TransparentFX
