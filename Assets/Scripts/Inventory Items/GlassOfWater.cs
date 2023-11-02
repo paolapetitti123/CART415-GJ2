@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GlassOfWater : MonoBehaviour, IInventoryItem
 {
@@ -8,7 +9,8 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
     public GameObject water;
     public ScareMeter scareMeter;
     public GameObject animatedWater;
-
+    public RawImage tvWorking;
+    public RawImage tvBroken;
 
     public string Name
     {
@@ -37,6 +39,9 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
         animatedWater.SetActive(false);
         scareMeter.point1.enabled = true;
         scareMeter.counter = 1;
+
+        tvBroken.GetComponent<RawImage>().enabled = false;
+        tvWorking.GetComponent<RawImage>().enabled = true;
     }
 
     // Update is called once per frame
@@ -60,6 +65,8 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
         {
             if (hit.collider.tag == "tv")
             {
+                water.SetActive(true);
+                water.transform.position = new Vector3(0f, 0f, 0f);
                 Invoke("Remove", 5.0f);
 
                 //StartCoroutine(Remove());
@@ -71,6 +78,9 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
                 Animator characterAnimator = character2.GetComponent<Animator>();
 
                 // add animator for tv
+                StartCoroutine(TVBreaking());
+                //tvBroken.GetComponent<RawImage>().enabled = true;
+                //tvWorking.GetComponent<RawImage>().enabled = false;
 
                 if (character2 != null)
                 {
@@ -82,9 +92,6 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
                     {
                         scareMeter.ScareCount();
                         scareMeter.counter++;
-                        
-
-
                     }
 
                 }
@@ -99,6 +106,13 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
 
         }
 
+    }
+
+    private IEnumerator TVBreaking()
+    {
+        yield return new WaitForSeconds(1.5f);
+        tvBroken.GetComponent<RawImage>().enabled = true;
+        tvWorking.GetComponent<RawImage>().enabled = false;
     }
 
 
