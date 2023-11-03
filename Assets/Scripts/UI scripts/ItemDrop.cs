@@ -47,6 +47,11 @@ public class ItemDrop : MonoBehaviour, IDropHandler
                         _Inventory.RemoveItem(item);
                         item.OnDrop();
                     }
+                    else if (hit.collider.tag == "cdPlayer" && item.Name == "CDObject")
+                    {
+                        _Inventory.RemoveItem(item);
+                        item.OnDrop();
+                    }
 
                     // next room
                     // next room

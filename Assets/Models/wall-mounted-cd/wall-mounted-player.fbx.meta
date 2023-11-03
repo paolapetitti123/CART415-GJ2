@@ -3,7 +3,12 @@ guid: 1f36d6853371cd546904acc36c93c5ba
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Katherine_Shoe2
+    second: {fileID: 2100000, guid: a7a22b829532ec846af070f353733ead, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

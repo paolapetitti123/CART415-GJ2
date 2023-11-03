@@ -28,6 +28,8 @@ TagManager:
   - tvBroken
   - vpWorking
   - vpBroken
+  - cdPlayer
+  - cdShow
   layers:
   - Default
   - TransparentFX
