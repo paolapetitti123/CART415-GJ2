@@ -6,7 +6,12 @@ using UnityEngine.UI;
 
 public class PictureFrame : MonoBehaviour
 {
+    int counter;
 
+    public void Start()
+    {
+        counter = 0;
+    }
     private void OnMouseDown()
     {
         gameObject.GetComponent<Animator>().enabled = true;
@@ -31,10 +36,13 @@ public class PictureFrame : MonoBehaviour
         {
             // trigger character animation when chandelier falls
             characterAnimator.Play("sitting-to-disbelief");
-
-            int lifeLost = 1;
-
-            GhostLives.Instance.GhostLivesCounter(lifeLost);
+            if (counter == 0)
+            {
+                int lifeLost = 1;
+                GhostLives.Instance.GhostLivesCounter(lifeLost);
+                counter = 1;
+            }
+            
 
         }
         

@@ -28,12 +28,14 @@ public class GhostLives : MonoBehaviour
     }
     public void GhostLivesCounter(int counter)
     {
-        totalCounter += counter;
+       totalCounter += counter;
+        Debug.Log(totalCounter);
         if(totalCounter == 1)
         {
             ghostLife1.GetComponent<Animator>().Play("ghost-life-lost");
 
             StartCoroutine(GhostLifeLost(ghostLife1, ghostLost1));
+            
         }
         else if(totalCounter == 2)
         {
@@ -41,7 +43,7 @@ public class GhostLives : MonoBehaviour
 
             StartCoroutine(GhostLifeLost(ghostLife2, ghostLost2));
         }
-        else if(totalCounter == 4)
+        else if(totalCounter == 3)
         {
             ghostLife3.GetComponent<Animator>().Play("ghost-life-lost");
 
