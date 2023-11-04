@@ -75,8 +75,14 @@ public class ScareMeter : MonoBehaviour
  
     public void ScareEvent(int count)
     {
+        if(totalCounter == 0)
+        {
+            totalCounter = 1;
+        }
+
         totalCounter += count;
         Debug.Log("Total Count: " + totalCounter);
+
 
         if(totalCounter == 2)
         {
@@ -95,7 +101,7 @@ public class ScareMeter : MonoBehaviour
             Ghost2.enabled = true;
 
         }
-        else if (totalCounter == 6)
+        else if (totalCounter == 4)
         {
        
             point2.enabled = true;
