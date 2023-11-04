@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GlassOfWater : MonoBehaviour, IInventoryItem
 {
     public Sprite _Image = null;
+    public Camera mainCamera;
+    public Camera scareCamera;
     public GameObject water;
     public ScareMeter scareMeter;
     public GameObject animatedWater;
@@ -34,11 +36,13 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera.enabled = true;
+        scareCamera.enabled = false;
         water.SetActive(true);
         //Get camera's MonoBehaviour
         animatedWater.SetActive(false);
-        scareMeter.point1.enabled = true;
-        scareMeter.counter = 1;
+        //scareMeter.point1.enabled = true;
+        //scareMeter.counter = 1;
 
         tvBroken.GetComponent<RawImage>().enabled = false;
         tvWorking.GetComponent<RawImage>().enabled = true;
@@ -67,6 +71,10 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
         {
             if (hit.collider.tag == "tv")
             {
+                mainCamera.enabled = false;
+                scareCamera.enabled = true;
+                Invoke("CamSwitch", 4.0f);
+
                 water.SetActive(true);
                 water.transform.position = new Vector3(0f, 0f, 0f);
                 Invoke("Remove", 5.0f);
@@ -75,43 +83,23 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
                 Debug.Log("Tag foud. Hitting the tv");
                 animatedWater.SetActive(true);
 
-                GameObject character2 = GameObject.FindGameObjectWithTag("character2");
-                Animator characterAnimator = character2.GetComponent<Animator>();
 
                 // add animator for tv
                 StartCoroutine(TVBreaking());
 
-                
-                
-                if (character2 != null)
-                {
-                    // trigger character animation when chandelier falls
-
-                    Debug.Log("scare animation for tv");
-
-                    if (scareMeter != null)
-                    {
-                        if(ifCounter == 0)
-                        {
-                            int scareCount = 1;
-                            //scareMeter.ScareCount();
-                            scareMeter.ScareEvent(scareCount);
-                            //scareMeter.counter++;
-                        }
-
-                    }
-
-                }
 
 
             }
-            else
-            {
-                Debug.Log("Not hitting the tv");
-                transform.localPosition = Vector3.zero;
-            }
+
 
         }
+        else
+        {
+            Debug.Log("Not hitting the tv");
+            transform.localPosition = Vector3.zero;
+        }
+
+
 
     }
 
@@ -131,4 +119,33 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
     }
 
 
+
+    public void CamSwitch()
+    {
+        Debug.Log("in cam switch");
+        mainCamera.enabled = true;
+        scareCamera.enabled = false;
+        GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+        Animator characterAnimator = character2.GetComponent<Animator>();
+
+
+        if (character2 != null)
+        {
+            // trigger character animation when chandelier falls
+
+            Debug.Log("scare animation for tv");
+
+            if (scareMeter != null)
+            {
+                if (ifCounter == 0)
+                {
+                    int scareCount = 1;
+                    //scareMeter.ScareCount();
+                    scareMeter.ScareEvent(scareCount);
+                    //scareMeter.counter++;
+                }
+
+            }
+        }
+    }
 }

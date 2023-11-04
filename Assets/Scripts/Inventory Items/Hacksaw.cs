@@ -5,6 +5,8 @@ using UnityEngine;
 public class Hacksaw : MonoBehaviour, IInventoryItem
 {
     public Sprite _Image = null;
+    public Camera mainCamera;
+    public Camera scareCamera;
     public ScareMeter scareMeter;
     public GameObject hacksaw;
     public GameObject chandelier;
@@ -29,6 +31,8 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     // Start is called before the first frame update
     void Start()
     {
+        mainCamera.enabled = true;
+        scareCamera.enabled = false;
         scareMeter.point1.enabled = true;
         scareMeter.counter = 1;
     }
@@ -53,7 +57,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         {
             if (hit.collider.tag == "chandelier")
             {
-
+              
                 gameObject.SetActive(true);
 
                 StartCoroutine(cutHacksaw());
@@ -97,6 +101,8 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     {
         yield return new WaitForSeconds(0f);
 
+        mainCamera.enabled = false;
+        scareCamera.enabled = true;
 
         if (hacksaw != null && hacksaw.activeInHierarchy == true)
         {
@@ -115,7 +121,10 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     }
     private IEnumerator Fall()
     {
+       
         yield return new WaitForSeconds(1.5f);
+        mainCamera.enabled = true;
+        scareCamera.enabled = false;
         Animator chandelierAnimator = chandelier.GetComponent<Animator>();
         chandelierAnimator.SetBool("isCut", true);
         Debug.Log("falling chandelier");
