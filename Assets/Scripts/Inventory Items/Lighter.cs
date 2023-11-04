@@ -116,6 +116,7 @@ public class Lighter : MonoBehaviour, IInventoryItem
                     //scareMeter.ScareCount();
                     scareMeter.ScareEvent(scareCount);
                     //scareMeter.counter++;
+                    ifCounter = 1;
                 }
             }
 

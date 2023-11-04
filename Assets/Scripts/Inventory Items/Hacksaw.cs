@@ -10,7 +10,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     public ScareMeter scareMeter;
     public GameObject hacksaw;
     public GameObject chandelier;
-
+    int ifCounter;
 
     public string Name
     {
@@ -35,6 +35,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         scareCamera.enabled = false;
         scareMeter.point1.enabled = true;
         scareMeter.counter = 1;
+        ifCounter = 0;
     }
 
     // Update is called once per frame
@@ -78,10 +79,14 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
 
                     if (scareMeter != null)
                     {
-                        int scareCount = 1;
-                        //scareMeter.ScareCount();
-                        scareMeter.ScareEvent(scareCount);
-                        //scareMeter.counter++;
+                        if (ifCounter == 0)
+                        {
+                            int scareCount = 1;
+                            //scareMeter.ScareCount();
+                            scareMeter.ScareEvent(scareCount);
+                            //scareMeter.counter++;
+                            ifCounter = 1;
+                        }
 
                     }
 

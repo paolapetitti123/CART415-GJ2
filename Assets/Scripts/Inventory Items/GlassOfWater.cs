@@ -75,17 +75,14 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
                 scareCamera.enabled = true;
                 Invoke("CamSwitch", 4.0f);
 
-                water.SetActive(true);
-                water.transform.position = new Vector3(0f, 0f, 0f);
                 Invoke("Remove", 5.0f);
 
 
                 Debug.Log("Tag foud. Hitting the tv");
                 animatedWater.SetActive(true);
 
+                Invoke("TVBreaking", 1.5f);
 
-                // add animator for tv
-                StartCoroutine(TVBreaking());
 
 
 
@@ -103,12 +100,11 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
 
     }
 
-    private IEnumerator TVBreaking()
+    public void TVBreaking()
     {
-        yield return new WaitForSeconds(1.5f);
-        tvBroken.GetComponent<RawImage>().enabled = true;
         tvWorking.GetComponent<RawImage>().enabled = false;
-        water.SetActive(false);
+        tvBroken.GetComponent<RawImage>().enabled = true;
+        
     }
 
 
@@ -143,6 +139,7 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
                     //scareMeter.ScareCount();
                     scareMeter.ScareEvent(scareCount);
                     //scareMeter.counter++;
+                    ifCounter = 1;
                 }
 
             }
