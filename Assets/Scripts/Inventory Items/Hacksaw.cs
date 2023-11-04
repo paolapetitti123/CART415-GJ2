@@ -59,22 +59,26 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
                 StartCoroutine(cutHacksaw());
 
                 Debug.Log("Hitting the chandelier");
-                
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
-                Animator characterAnimator = character2.GetComponent<Animator>();
 
                 // add animator for chandelier
-                
+
                 if (character2 != null)
                 {
                     // trigger character animation when chandelier falls
+                    
+
+                   
 
                     Debug.Log("scare animation");
 
                     if (scareMeter != null)
                     {
-                        scareMeter.ScareCount(); 
-                        
+                        int scareCount = 1;
+                        //scareMeter.ScareCount();
+                        scareMeter.ScareEvent(scareCount);
+                        //scareMeter.counter++;
+
                     }
 
                 }
@@ -106,22 +110,22 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         }
         else if (hacksaw != null && hacksaw.activeInHierarchy == false)
         {
-            //hacksaw.GetComponent<BoxCollider>().enabled = false;
-           // hacksaw.GetComponent<Animator>().enabled = false;
+            Debug.Log("hacksaw not showing up for some reason so I'm here in it's place"); 
         }
     }
     private IEnumerator Fall()
     {
-        yield return new WaitForSeconds(1.8f);
+        yield return new WaitForSeconds(1.5f);
         Animator chandelierAnimator = chandelier.GetComponent<Animator>();
         chandelierAnimator.SetBool("isCut", true);
         Debug.Log("falling chandelier");
         hacksaw.SetActive(false);
-
-
+       
+        GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+        Animator characterAnimator = character2.GetComponent<Animator>();
+        characterAnimator.Play("sitting-dodge");
 
 
     }
-
 
 }

@@ -53,8 +53,6 @@ public class ItemDrop : MonoBehaviour, IDropHandler
                         item.OnDrop();
                     }
 
-                    // next room
-                    // next room
                 }
                 
             }

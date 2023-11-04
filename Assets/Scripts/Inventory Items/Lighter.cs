@@ -9,7 +9,7 @@ public class Lighter : MonoBehaviour, IInventoryItem
     public GameObject curtainFire;
     public GameObject curtain;
     public ScareMeter scareMeter;
-
+    int ifCounter;
     public string Name
     {
         get
@@ -32,7 +32,7 @@ public class Lighter : MonoBehaviour, IInventoryItem
         curtainFire.SetActive(false);
         candleFire.SetActive(false);
 
-
+        ifCounter = 0;
     }
 
     // Update is called once per frame
@@ -65,20 +65,25 @@ public class Lighter : MonoBehaviour, IInventoryItem
                 candleFire.SetActive(true);
 
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
-                //Animator characterAnimator = character2.GetComponent<Animator>();
+                Animator characterAnimator = character2.GetComponent<Animator>();
 
                 
 
                 if (character2 != null)
                 {
                     // trigger character animation when chandelier falls
-
+                    characterAnimator.Play("sitting-to-stand-scared");
                     Debug.Log("scare animation for candle");
 
                     if (scareMeter != null)
                     {
-                        scareMeter.ScareCount();
-                        scareMeter.counter++;
+                        if (ifCounter == 0)
+                        {
+                            int scareCount = 1;
+                            //scareMeter.ScareCount();
+                            scareMeter.ScareEvent(scareCount);
+                            //scareMeter.counter++;
+                        }
                     }
 
                 }

@@ -12,11 +12,17 @@ public class ScareMeter : MonoBehaviour
     public Image point5;
     public Image point6;
     public Image point7;
-    public Image point8;
-    public Image point9;
-    public Image point10;
+
+    public Image Ghost1;
+    public Image Ghost2;
+    public Image Ghost3;
+    //  public Image point8;
+    // public Image point9;
+    // public Image point10;
 
     public int counter;
+    int totalCounter; 
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +34,11 @@ public class ScareMeter : MonoBehaviour
         point5.enabled = false;
         point6.enabled = false;
         point7.enabled = false;
-        point8.enabled = false;
-        point9.enabled = false;
-        point10.enabled = false;
+        Ghost1.enabled = false;
+        Ghost2.enabled = false;
+        Ghost3.enabled = false;
         counter = 0;
+        totalCounter = 0;
     }
 
     // Update is called once per frame
@@ -55,7 +62,7 @@ public class ScareMeter : MonoBehaviour
         if (point1.enabled == true)
         {
             Debug.Log("enabled");
-            counter++;
+            counter = 1;
         }
         else
         {
@@ -68,91 +75,51 @@ public class ScareMeter : MonoBehaviour
  
     public void ScareEvent(int count)
     {
-        Debug.Log("in scare event");
-        
-        if(count == 2)
+        totalCounter += count;
+        Debug.Log("Total Count: " + totalCounter);
+
+        if(totalCounter == 2)
         {
-            //    point2.enabled = true;
-
-
-            //}
-            //else if(counter == 3)
-            //{
-            //    point2.enabled = true;
-            //    point3.enabled = true;
-
-            //}
-            //else if (counter == 4)
-            //{
+            point2.enabled = true;
+            point3.enabled = true;
+            Ghost1.enabled = true;
+            
+        }
+        else if (totalCounter == 3)
+        {
             point2.enabled = true;
             point3.enabled = true;
             point4.enabled = true;
-            
+            point5.enabled = true;
+            Ghost1.enabled = true;
+            Ghost2.enabled = true;
+
         }
-        else if (counter == 3)
+        else if (totalCounter == 6)
         {
-        //    point2.enabled = true;
-        //    point3.enabled = true;
-        //    point4.enabled = true;
-        //    point5.enabled = true;
-            
-        //}
-        //else if (counter == 6)
-        //{
-        //    point2.enabled = true;
-        //    point3.enabled = true;
-        //    point4.enabled = true;
-        //    point5.enabled = true;
-        //    point6.enabled = true;
-            
-        //}
-        //else if (counter == 7)
-        //{
+       
             point2.enabled = true;
             point3.enabled = true;
             point4.enabled = true;
             point5.enabled = true;
             point6.enabled = true;
             point7.enabled = true;
-            
-        }
-        else if (counter == 4)
-        {
-        //    point2.enabled = true;
-        //    point3.enabled = true;
-        //    point4.enabled = true;
-        //    point5.enabled = true;
-        //    point6.enabled = true;
-        //    point7.enabled = true;
-        //    point8.enabled = true;
-            
-        //}
-        //else if (counter == 9)
-        //{
-        //    point2.enabled = true;
-        //    point3.enabled = true;
-        //    point4.enabled = true;
-        //    point5.enabled = true;
-        //    point6.enabled = true;
-        //    point7.enabled = true;
-        //    point8.enabled = true;
-        //    point9.enabled = true;
-            
-        //}
-        //else if (counter == 10)
-        //{
-            point2.enabled = true;
-            point3.enabled = true;
-            point4.enabled = true;
-            point5.enabled = true;
-            point6.enabled = true;
-            point7.enabled = true;
-            point8.enabled = true;
-            point9.enabled = true;
-            point10.enabled = true;
+            Ghost1.enabled = true;
+            Ghost2.enabled = true;
+            Ghost3.enabled = true;
+
 
             // Game win
+            StartCoroutine(LoadGameWinScene());
         }
+    }
+
+    private IEnumerator LoadGameWinScene()
+    {
+        yield return new WaitForSeconds(3f);
+
+        GameStateManager.Instance.LoadScene(GameStateManager.Scene.GameWin);
+
     }
 
 

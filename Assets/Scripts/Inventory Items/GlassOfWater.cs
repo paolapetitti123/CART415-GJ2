@@ -11,7 +11,7 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
     public GameObject animatedWater;
     public RawImage tvWorking;
     public RawImage tvBroken;
-
+    int ifCounter;
     public string Name
     {
         get
@@ -42,6 +42,8 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
 
         tvBroken.GetComponent<RawImage>().enabled = false;
         tvWorking.GetComponent<RawImage>().enabled = true;
+
+        ifCounter = 0;
     }
 
     // Update is called once per frame
@@ -69,7 +71,6 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
                 water.transform.position = new Vector3(0f, 0f, 0f);
                 Invoke("Remove", 5.0f);
 
-                //StartCoroutine(Remove());
 
                 Debug.Log("Tag foud. Hitting the tv");
                 animatedWater.SetActive(true);
@@ -79,9 +80,9 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
 
                 // add animator for tv
                 StartCoroutine(TVBreaking());
-                //tvBroken.GetComponent<RawImage>().enabled = true;
-                //tvWorking.GetComponent<RawImage>().enabled = false;
 
+                
+                
                 if (character2 != null)
                 {
                     // trigger character animation when chandelier falls
@@ -90,8 +91,14 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
 
                     if (scareMeter != null)
                     {
-                        scareMeter.ScareCount();
-                        scareMeter.counter++;
+                        if(ifCounter == 0)
+                        {
+                            int scareCount = 1;
+                            //scareMeter.ScareCount();
+                            scareMeter.ScareEvent(scareCount);
+                            //scareMeter.counter++;
+                        }
+
                     }
 
                 }
@@ -113,6 +120,7 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
         yield return new WaitForSeconds(1.5f);
         tvBroken.GetComponent<RawImage>().enabled = true;
         tvWorking.GetComponent<RawImage>().enabled = false;
+        water.SetActive(false);
     }
 
 

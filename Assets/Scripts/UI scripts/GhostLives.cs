@@ -49,6 +49,7 @@ public class GhostLives : MonoBehaviour
 
             StartCoroutine(GhostLifeLost(ghostLife3, ghostLost3));
 
+            StartCoroutine(LoadGameOverScene());
             // gameover
         }
     }
@@ -59,5 +60,13 @@ public class GhostLives : MonoBehaviour
         life.enabled = true;
         lost.enabled = false;
        
+    }
+
+    private IEnumerator LoadGameOverScene()
+    {
+        yield return new WaitForSeconds(3f);
+
+        GameStateManager.Instance.LoadScene(GameStateManager.Scene.GameOver);
+
     }
 }

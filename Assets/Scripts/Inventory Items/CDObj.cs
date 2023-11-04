@@ -37,8 +37,10 @@ public class CDObj : MonoBehaviour, IInventoryItem
             {
                 
                  cdShow.SetActive(true);
-                //gameObject.SetActive(true);
-               // gameObject.transform.position = new Vector3(0f, 0f, 0f);
+                
+                GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+                Animator characterAnimator = character2.GetComponent<Animator>();
+
 
                 Debug.Log(" hitting the player");
                 
@@ -48,9 +50,13 @@ public class CDObj : MonoBehaviour, IInventoryItem
                     GhostLives.Instance.GhostLivesCounter(lifeLost);
                     counter = 1;
                 }
-                    
-                
-               
+                if (character2 != null)
+                {
+                    characterAnimator.Play("sitting-not-phased");
+                }
+
+
+
 
             }
             else

@@ -20,6 +20,15 @@ public class LightSwitch : MonoBehaviour
         LightOne.GetComponent<Animator>().Play("light-flicker");
         LightTwo.GetComponent<Animator>().Play("light-flicker");
 
+        GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+        Animator characterAnimator = character2.GetComponent<Animator>();
+
+        if (character2 != null)
+        {
+            // trigger character animation when chandelier falls
+            characterAnimator.Play("sitting-to-disbelief");
+        }
+            
         if (counter == 0)
         {
             int lifeLost = 1;
