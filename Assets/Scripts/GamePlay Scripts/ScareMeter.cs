@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ScareMeter : MonoBehaviour
 {
+
     public Image point1;
     public Image point2;
     public Image point3;
@@ -27,6 +28,7 @@ public class ScareMeter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         point1.enabled = false;
         point2.enabled = false;
         point3.enabled = false;
@@ -39,6 +41,10 @@ public class ScareMeter : MonoBehaviour
         Ghost3.enabled = false;
         counter = 0;
         totalCounter = 0;
+        GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
+
+        scareMeter.GetComponent<Animator>().enabled = false;
+
     }
 
     // Update is called once per frame
@@ -82,48 +88,87 @@ public class ScareMeter : MonoBehaviour
 
         totalCounter += count;
         Debug.Log("Total Count: " + totalCounter);
+        GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
 
+        //Animator scareAddAnimator = scareMeter.GetComponent<Animator>();
 
-        if(totalCounter == 2)
+        if (totalCounter == 2)
         {
-            point2.enabled = true;
-            point3.enabled = true;
-            Ghost1.enabled = true;
-            
+            scareMeter.GetComponent<Animator>().enabled = true;
+
+            scareMeter.GetComponent<Animator>().Play("pointAdd");
+            Invoke("counter2", 2.0f);
+            //StartCoroutine(Reset());
+
+
         }
         else if (totalCounter == 3)
         {
-            point2.enabled = true;
-            point3.enabled = true;
-            point4.enabled = true;
-            point5.enabled = true;
-            Ghost1.enabled = true;
-            Ghost2.enabled = true;
+
+            scareMeter.GetComponent<Animator>().Play("pointAdd");
+            Invoke("counter3", 2.0f);
+            //StartCoroutine(Reset());
+
 
         }
         else if (totalCounter == 4)
         {
-       
-            point2.enabled = true;
-            point3.enabled = true;
-            point4.enabled = true;
-            point5.enabled = true;
-            point6.enabled = true;
-            point7.enabled = true;
-            Ghost1.enabled = true;
-            Ghost2.enabled = true;
-            Ghost3.enabled = true;
 
-
+            scareMeter.GetComponent<Animator>().Play("pointAdd");
+            Invoke("counter4", 2.0f);
             // Game win
             StartCoroutine(LoadGameWinScene());
         }
     }
 
+    public void counter2()
+    {
+        point2.enabled = true;
+        point3.enabled = true;
+        Ghost1.enabled = true;
+  
+    }
+
+    public void counter3()
+    {
+        point2.enabled = true;
+        point3.enabled = true;
+        point4.enabled = true;
+        point5.enabled = true;
+        Ghost1.enabled = true;
+        Ghost2.enabled = true;
+       
+    }
+    public void counter4()
+
+    {
+        point2.enabled = true;
+        point3.enabled = true;
+        point4.enabled = true;
+        point5.enabled = true;
+        point6.enabled = true;
+        point7.enabled = true;
+        Ghost1.enabled = true;
+        Ghost2.enabled = true;
+        Ghost3.enabled = true;
+    }
+
+    //private IEnumerator Reset()
+    //{
+    //    yield return new WaitForSeconds(3f);
+    //    GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
+    //    Animator scareAddAnimator = scareMeter.GetComponent<Animator>();
+    //    scareAddAnimator.SetBool("add", false);
+    //}
+
+
     private IEnumerator LoadGameWinScene()
     {
         yield return new WaitForSeconds(3f);
-
+        GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
+        Animator scareMeterAnimator = scareMeter.GetComponent<Animator>();
+        scareMeterAnimator.SetBool("win", true);
+        yield return new WaitForSeconds(4f);
         GameStateManager.Instance.LoadScene(GameStateManager.Scene.GameWin);
 
     }

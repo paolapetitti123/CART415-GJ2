@@ -68,31 +68,11 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
                 StartCoroutine(cutHacksaw());
      
                 Debug.Log("Hitting the chandelier");
-                GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+              
 
                 // add animator for chandelier
 
-                if (character2 != null)
-                {
-                    // trigger character animation when chandelier falls
-
-
-                    Debug.Log("scare animation");
-
-                    if (scareMeter != null)
-                    {
-                        if (ifCounter == 0)
-                        {
-                            int scareCount = 1;
-                            //scareMeter.ScareCount();
-                            scareMeter.ScareEvent(scareCount);
-                            //scareMeter.counter++;
-                            ifCounter = 1;
-                        }
-
-                    }
-
-                }
+                
 
             }
             else
@@ -137,10 +117,32 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         chandelierAnimator.SetBool("isCut", true);
         Debug.Log("falling chandelier");
         hacksaw.SetActive(false);
-    
-
-
         GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+
+        if (character2 != null)
+        {
+            // trigger character animation when chandelier falls
+
+
+            Debug.Log("scare animation");
+
+            if (scareMeter != null)
+            {
+                if (ifCounter == 0)
+                {
+                    int scareCount = 1;
+                    //scareMeter.ScareCount();
+                    scareMeter.ScareEvent(scareCount);
+                    //scareMeter.counter++;
+                    ifCounter = 1;
+                }
+
+            }
+
+        }
+
+
+
         Animator characterAnimator = character2.GetComponent<Animator>();
         characterAnimator.Play("sitting-dodge");
 

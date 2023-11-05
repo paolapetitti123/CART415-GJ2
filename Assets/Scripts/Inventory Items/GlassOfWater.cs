@@ -83,30 +83,7 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
 
                 Invoke("TVBreaking", 1.5f);
 
-                GameObject character2 = GameObject.FindGameObjectWithTag("character2");
-                Animator characterAnimator = character2.GetComponent<Animator>();
-
-
-                if (character2 != null)
-                {
-                    // trigger character animation when chandelier falls
-
-                    Debug.Log("scare animation for tv");
-
-                    if (scareMeter != null)
-                    {
-                        if (ifCounter == 0)
-                        {
-                            Debug.Log("In Glass of Water Scare Counter");
-                            int scareCount = 1;
-                            //scareMeter.ScareCount();
-                            scareMeter.ScareEvent(scareCount);
-                            //scareMeter.counter++;
-                            ifCounter = 1;
-                        }
-
-                    }
-                }
+               
 
 
             }
@@ -144,6 +121,30 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
         Debug.Log("in cam switch");
         mainCamera.enabled = true;
         scareCamera.enabled = false;
+        GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+        Animator characterAnimator = character2.GetComponent<Animator>();
+
+
+        if (character2 != null)
+        {
+            // trigger character animation when chandelier falls
+
+            Debug.Log("scare animation for tv");
+
+            if (scareMeter != null)
+            {
+                if (ifCounter == 0)
+                {
+                    Debug.Log("In Glass of Water Scare Counter");
+                    int scareCount = 1;
+                    //scareMeter.ScareCount();
+                    scareMeter.ScareEvent(scareCount);
+                    //scareMeter.counter++;
+                    ifCounter = 1;
+                }
+
+            }
+        }
 
     }
 }
