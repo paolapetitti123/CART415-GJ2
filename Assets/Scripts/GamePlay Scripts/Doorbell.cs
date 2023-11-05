@@ -5,6 +5,7 @@ using UnityEngine;
 public class Doorbell : MonoBehaviour
 {
     private AudioSource doorBellAudio;
+    [SerializeField] public AudioSource doorOpenAudio;
     public GameObject character;
     public GameObject character2;
     public bool isScared = false;
@@ -13,6 +14,7 @@ public class Doorbell : MonoBehaviour
     public Animator ghostAnimator;
     public Camera mainCamera;
     public Camera camera2;
+
 
 
     void Start()
@@ -45,10 +47,12 @@ public class Doorbell : MonoBehaviour
     private IEnumerator DoorOpen()
     {
         Debug.Log("Door OPEN");
-
         yield return new WaitForSeconds(2f);
+
+
         GameObject door = GameObject.FindGameObjectWithTag("door");
         Animator doorOpenAnimator = door.GetComponent<Animator>();
+        doorOpenAudio.Play();
 
         if (door != null)
         {

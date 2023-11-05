@@ -10,7 +10,10 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     public ScareMeter scareMeter;
     public GameObject hacksaw;
     public GameObject chandelier;
+    [SerializeField] public AudioSource fallSFX;
+    [SerializeField] public AudioSource sawSFX;
     int ifCounter;
+  
 
     public string Name
     {
@@ -54,15 +57,16 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         RaycastHit hit = new RaycastHit();
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+
         if (Physics.Raycast(ray, out hit, 10000))
         {
             if (hit.collider.tag == "chandelier")
             {
               
                 gameObject.SetActive(true);
-
+                sawSFX.Play();
                 StartCoroutine(cutHacksaw());
-
+     
                 Debug.Log("Hitting the chandelier");
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
 
@@ -71,9 +75,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
                 if (character2 != null)
                 {
                     // trigger character animation when chandelier falls
-                    
 
-                   
 
                     Debug.Log("scare animation");
 
@@ -109,6 +111,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         mainCamera.enabled = false;
         scareCamera.enabled = true;
 
+
         if (hacksaw != null && hacksaw.activeInHierarchy == true)
         {
             hacksaw.GetComponent<Animator>().enabled = true;
@@ -126,7 +129,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     }
     private IEnumerator Fall()
     {
-       
+        fallSFX.Play();
         yield return new WaitForSeconds(1.5f);
         mainCamera.enabled = true;
         scareCamera.enabled = false;
@@ -134,7 +137,9 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
         chandelierAnimator.SetBool("isCut", true);
         Debug.Log("falling chandelier");
         hacksaw.SetActive(false);
-       
+    
+
+
         GameObject character2 = GameObject.FindGameObjectWithTag("character2");
         Animator characterAnimator = character2.GetComponent<Animator>();
         characterAnimator.Play("sitting-dodge");
