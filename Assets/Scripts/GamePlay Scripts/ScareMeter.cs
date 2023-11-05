@@ -43,7 +43,7 @@ public class ScareMeter : MonoBehaviour
         totalCounter = 0;
         GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
 
-        scareMeter.GetComponent<Animator>().enabled = false;
+        scareMeter.GetComponent<Animator>().Play("Point-idle");
 
     }
 
@@ -99,8 +99,9 @@ public class ScareMeter : MonoBehaviour
             scareMeter.GetComponent<Animator>().enabled = true;
 
             scareMeter.GetComponent<Animator>().Play("pointAdd");
-            Invoke("counter2", 2.0f);
             //StartCoroutine(Reset());
+            Invoke("counter2", 1.5f);
+            
 
 
         }
@@ -109,8 +110,9 @@ public class ScareMeter : MonoBehaviour
             //scareAddAnimator.SetBool("add", true);
 
             scareMeter.GetComponent<Animator>().Play("pointAdd");
-            Invoke("counter3", 2.0f);
-            //StartCoroutine(Reset());
+           // StartCoroutine(Reset());
+            Invoke("counter3", 1.5f);
+            
 
 
         }
@@ -119,14 +121,19 @@ public class ScareMeter : MonoBehaviour
             //scareAddAnimator.SetBool("add", true);
 
             scareMeter.GetComponent<Animator>().Play("pointAdd");
-            Invoke("counter4", 2.0f);
+           // StartCoroutine(Reset());
+            Invoke("counter4", 1.5f);
             // Game win
-            StartCoroutine(LoadGameWinScene());
+            
+            
         }
     }
 
     public void counter2()
     {
+        GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
+        scareMeter.GetComponent<Animator>().Play("Point-idle");
+        StartCoroutine(Reset());
         point2.enabled = true;
         point3.enabled = true;
         Ghost1.enabled = true;
@@ -135,6 +142,9 @@ public class ScareMeter : MonoBehaviour
 
     public void counter3()
     {
+        GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
+        scareMeter.GetComponent<Animator>().Play("Point-idle");
+        StartCoroutine(Reset());
         point2.enabled = true;
         point3.enabled = true;
         point4.enabled = true;
@@ -144,8 +154,10 @@ public class ScareMeter : MonoBehaviour
        
     }
     public void counter4()
-
     {
+        GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
+        scareMeter.GetComponent<Animator>().Play("Point-idle");
+        StartCoroutine(ResetGameWin());
         point2.enabled = true;
         point3.enabled = true;
         point4.enabled = true;
@@ -155,16 +167,28 @@ public class ScareMeter : MonoBehaviour
         Ghost1.enabled = true;
         Ghost2.enabled = true;
         Ghost3.enabled = true;
+        StartCoroutine(LoadGameWinScene());
     }
 
-    //private IEnumerator Reset()
-    //{
-    //    yield return new WaitForSeconds(3f);
-    //    GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
-    //    Animator scareAddAnimator = scareMeter.GetComponent<Animator>();
-    //    scareAddAnimator.SetBool("add", false);
-    //}
+    private IEnumerator Reset()
+    {
+        yield return new WaitForSeconds(1f);
+        GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
+        
+        scareMeter.GetComponent<Animator>().Play("Point add");
+        
+    }
+    private IEnumerator ResetGameWin()
+    {
+        yield return new WaitForSeconds(1f);
+        GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
+        Animator scareAddAnimator = scareMeter.GetComponent<Animator>();
 
+
+
+        scareMeter.GetComponent<Animator>().Play("Scaremeter");
+
+    }
 
     private IEnumerator LoadGameWinScene()
     {
