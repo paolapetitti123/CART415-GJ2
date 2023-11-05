@@ -97,7 +97,6 @@ public class ScareMeter : MonoBehaviour
             //scareAddAnimator.SetBool("add", true);
 
             scareMeter.GetComponent<Animator>().enabled = true;
-
             scareMeter.GetComponent<Animator>().Play("pointAdd");
             //StartCoroutine(Reset());
             Invoke("counter2", 1.5f);
@@ -186,17 +185,18 @@ public class ScareMeter : MonoBehaviour
 
 
 
-        scareMeter.GetComponent<Animator>().Play("Scaremeter");
+        scareMeter.GetComponent<Animator>().Play("ScareMeter");
 
     }
 
     private IEnumerator LoadGameWinScene()
     {
         yield return new WaitForSeconds(3f);
+        Debug.Log("in game win coroutine");
         GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
         Animator scareMeterAnimator = scareMeter.GetComponent<Animator>();
         scareMeterAnimator.SetBool("win", true);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         GameStateManager.Instance.LoadScene(GameStateManager.Scene.GameWin);
 
     }
