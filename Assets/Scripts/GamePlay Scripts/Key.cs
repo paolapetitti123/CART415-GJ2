@@ -17,6 +17,7 @@ public class Key : MonoBehaviour, IInventoryItem
     public GameObject[] flashingGlow;
     public GameObject arrow;
     public AudioSource keyPickUpAudio;
+    [SerializeField] public AudioSource gaspSFX; 
     public bool isScared = false;
 
 
@@ -124,6 +125,7 @@ public class Key : MonoBehaviour, IInventoryItem
 
                     if (scareMeter != null)
                     {
+                        gaspSFX.Play();
                         scareMeter.TutorialScareEvent();
                     }
 

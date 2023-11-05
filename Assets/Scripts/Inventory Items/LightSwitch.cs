@@ -7,6 +7,7 @@ public class LightSwitch : MonoBehaviour
     // Start is called before the first frame update
     public GameObject LightOne;
     public GameObject LightTwo;
+    [SerializeField] public AudioSource flickerSFX;
     int counter;
 
     void Start()
@@ -19,6 +20,7 @@ public class LightSwitch : MonoBehaviour
         Debug.Log("Light click");
         LightOne.GetComponent<Animator>().Play("light-flicker");
         LightTwo.GetComponent<Animator>().Play("light-flicker");
+        flickerSFX.Play();
 
         GameObject character2 = GameObject.FindGameObjectWithTag("character2");
         Animator characterAnimator = character2.GetComponent<Animator>();
