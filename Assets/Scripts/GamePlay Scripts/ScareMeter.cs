@@ -90,10 +90,12 @@ public class ScareMeter : MonoBehaviour
         Debug.Log("Total Count: " + totalCounter);
         GameObject scareMeter = GameObject.FindGameObjectWithTag("scareMeter");
 
-        //Animator scareAddAnimator = scareMeter.GetComponent<Animator>();
+        Animator scareAddAnimator = scareMeter.GetComponent<Animator>();
 
         if (totalCounter == 2)
         {
+            //scareAddAnimator.SetBool("add", true);
+
             scareMeter.GetComponent<Animator>().enabled = true;
 
             scareMeter.GetComponent<Animator>().Play("pointAdd");
@@ -104,6 +106,7 @@ public class ScareMeter : MonoBehaviour
         }
         else if (totalCounter == 3)
         {
+            //scareAddAnimator.SetBool("add", true);
 
             scareMeter.GetComponent<Animator>().Play("pointAdd");
             Invoke("counter3", 2.0f);
@@ -113,6 +116,7 @@ public class ScareMeter : MonoBehaviour
         }
         else if (totalCounter == 4)
         {
+            //scareAddAnimator.SetBool("add", true);
 
             scareMeter.GetComponent<Animator>().Play("pointAdd");
             Invoke("counter4", 2.0f);
