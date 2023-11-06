@@ -2307,6 +2307,7 @@ GameObject:
   - component: {fileID: 411339987}
   - component: {fileID: 411339986}
   - component: {fileID: 411339985}
+  - component: {fileID: 411339989}
   m_Layer: 5
   m_Name: InventoryPanel
   m_TagString: InventoryPanel
@@ -2415,6 +2416,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411339983}
   m_CullTransparentMesh: 1
+--- !u!114 &411339989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411339983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd953b1bd8cb1534b9608a0eb6c1f917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultCursorTexture: {fileID: 2800000, guid: b4316ec752900b94585b829085e43ff8, type: 3}
+  HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
+  cursorModeVar: 0
+  hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!1 &418619781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2427,6 +2445,7 @@ GameObject:
   - component: {fileID: 418619785}
   - component: {fileID: 418619784}
   - component: {fileID: 418619783}
+  - component: {fileID: 418619786}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -2537,6 +2556,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418619781}
   m_CullTransparentMesh: 1
+--- !u!114 &418619786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418619781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 411339989}
+          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+          m_MethodName: OnButtonCursorEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 411339989}
+          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+          m_MethodName: OnButtonCursorExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &421925649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3723,6 +3787,7 @@ GameObject:
   - component: {fileID: 597283272}
   - component: {fileID: 597283271}
   - component: {fileID: 597283270}
+  - component: {fileID: 597283273}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -3833,6 +3898,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597283268}
   m_CullTransparentMesh: 1
+--- !u!114 &597283273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597283268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 411339989}
+          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+          m_MethodName: OnButtonCursorEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 411339989}
+          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+          m_MethodName: OnButtonCursorExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &603386819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5153,6 +5263,7 @@ GameObject:
   - component: {fileID: 904985007}
   - component: {fileID: 904985006}
   - component: {fileID: 904985005}
+  - component: {fileID: 904985008}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -5263,6 +5374,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904985003}
   m_CullTransparentMesh: 1
+--- !u!114 &904985008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904985003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 411339989}
+          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+          m_MethodName: OnButtonCursorEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 411339989}
+          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+          m_MethodName: OnButtonCursorExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &930325254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17343,6 +17499,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!4 &1627497349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0459a7f3fd1a17b48b2a6182e94eec89, type: 3}
@@ -17396,6 +17553,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!1 &1632212187
 GameObject:
   m_ObjectHideFlags: 0
@@ -23671,6 +23829,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.070290655, y: 0.08127915, z: 0.06957052}
   m_Center: {x: -0.0004676692, y: -0.000000007450581, z: 0.000263093}
+--- !u!114 &1982214269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982214258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd953b1bd8cb1534b9608a0eb6c1f917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultCursorTexture: {fileID: 2800000, guid: b4316ec752900b94585b829085e43ff8, type: 3}
+  HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
+  cursorModeVar: 0
+  hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!1001 &1984125455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23775,6 +23950,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!1 &1991810522
 GameObject:
   m_ObjectHideFlags: 0
@@ -23885,6 +24061,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!1001 &2007305093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29336,6 +29513,7 @@ GameObject:
   - component: {fileID: 2091104564}
   - component: {fileID: 2091104563}
   - component: {fileID: 2091104562}
+  - component: {fileID: 2091104565}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -29446,6 +29624,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091104560}
   m_CullTransparentMesh: 1
+--- !u!114 &2091104565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091104560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 411339989}
+          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+          m_MethodName: OnButtonCursorEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 411339989}
+          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
+          m_MethodName: OnButtonCursorExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2145492235
 GameObject:
   m_ObjectHideFlags: 0
@@ -32043,6 +32266,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!33 &1133392113679356017
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -58668,6 +58892,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!23 &5785878804110691097
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -60773,6 +60998,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!23 &6992714960073653208
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62698,6 +62924,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!1 &8155420493827201988
 GameObject:
   m_ObjectHideFlags: 0
@@ -63851,6 +64078,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!33 &8765610912561504258
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -64523,6 +64751,7 @@ MonoBehaviour:
   HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
   cursorModeVar: 0
   hotSpotMouse: {x: 0, y: 0}
+  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!4 &9068539834596959012
 Transform:
   m_ObjectHideFlags: 0

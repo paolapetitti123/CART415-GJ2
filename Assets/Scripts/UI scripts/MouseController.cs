@@ -10,6 +10,7 @@ public class MouseController : MonoBehaviour
 
     public CursorMode cursorModeVar = CursorMode.Auto;
     public Vector2 hotSpotMouse = Vector2.zero;
+    public Vector2 OnButtonCursorHotSpot = Vector2.zero;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,16 @@ public class MouseController : MonoBehaviour
     }
 
     public void OnMouseExit()
+    {
+        Cursor.SetCursor(DefaultCursorTexture, hotSpotMouse, cursorModeVar);
+    }
+
+    public void OnButtonCursorEnter()
+    {
+        Cursor.SetCursor(HoverCursorTexture, hotSpotMouse, cursorModeVar);
+    }
+
+    public void OnButtonCursorExit()
     {
         Cursor.SetCursor(DefaultCursorTexture, hotSpotMouse, cursorModeVar);
     }
