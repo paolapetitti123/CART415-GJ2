@@ -52,6 +52,7 @@ public class GhostLives : MonoBehaviour
             ghostLife2.GetComponent<Animator>().Play("ghost-life-lost");
             failOverlayObject.SetActive(true);
             failOverlayObject.GetComponent<Animator>().Play("fail-anim");
+            
 
             StartCoroutine(GhostLifeLost(ghostLife2, ghostLost2));
         }
