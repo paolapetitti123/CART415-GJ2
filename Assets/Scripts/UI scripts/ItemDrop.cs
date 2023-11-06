@@ -52,6 +52,13 @@ public class ItemDrop : MonoBehaviour, IDropHandler
                         _Inventory.RemoveItem(item);
                         item.OnDrop();
                     }
+                    else if (hit.collider.tag == "RecycleBin")
+                    {
+                    Debug.Log("Item dropped over an object with tag: " + hit.collider.tag);
+                     _Inventory.RemoveItem(item);
+                     item.OnDrop();
+
+                    }
 
                 }
                 

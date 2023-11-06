@@ -39,6 +39,23 @@ public class Key : MonoBehaviour, IInventoryItem
         }
     }
 
+  public void OnDrag(PointerEventData eventData)
+    {
+        // Implement drag behavior here if needed
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (eventData.pointerEnter != null)
+        {
+            RecycleBin recycleBin = eventData.pointerEnter.GetComponent<RecycleBin>();
+            if (recycleBin != null)
+            {
+                // The key has been dropped into the recycle bin
+                OnDrop();
+            }
+        }
+    }
     void Start()
     {
         keyPickUpAudio.GetComponent<AudioSource>();
@@ -140,6 +157,7 @@ public class Key : MonoBehaviour, IInventoryItem
             }
 
         }
+        
     }
 
 
