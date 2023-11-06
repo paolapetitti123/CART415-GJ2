@@ -120,12 +120,13 @@ public class Key : MonoBehaviour, IInventoryItem
                 if (character2 != null)
                 {
                     lookAnimator.SetBool("isScared", true);
+                    gaspSFX.Play();
                     character2.transform.Rotate(0f, -45f, 0.0f, Space.Self);
                     Debug.Log("scare animation");
 
                     if (scareMeter != null)
                     {
-                        gaspSFX.Play();
+                        
                         scareMeter.TutorialScareEvent();
                     }
 
