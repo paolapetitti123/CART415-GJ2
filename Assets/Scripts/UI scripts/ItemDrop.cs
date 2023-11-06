@@ -10,18 +10,19 @@ public class ItemDrop : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         RectTransform invPanel = transform as RectTransform;
+        
 
-        if(!RectTransformUtility.RectangleContainsScreenPoint(invPanel, Input.mousePosition))
+        if (!RectTransformUtility.RectangleContainsScreenPoint(invPanel, Input.mousePosition))
         {
-            
+           
             IInventoryItem item = eventData.pointerDrag.gameObject.GetComponent<ItemDrag>().Item;
 
             RaycastHit hit = new RaycastHit();
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            Debug.Log(item.Name + " dropping from inventory");
 
-            if (Physics.Raycast(ray, out hit, 100))
+
+            if (Physics.Raycast(ray, out hit, 10000))
             {
                 if(item != null)
                 {
@@ -52,16 +53,13 @@ public class ItemDrop : MonoBehaviour, IDropHandler
                         _Inventory.RemoveItem(item);
                         item.OnDrop();
                     }
-                    else if (hit.collider.tag == "RecycleBin")
+                    else if (hit.collider.tag == "RecycleBin" && item.Name == "CDObject" || item.Name == "Cup of water" || item.Name == "Lighter" || item.Name == "Hacksaw")
                     {
-                    Debug.Log("Item dropped over an object with tag: " + hit.collider.tag);
-                     _Inventory.RemoveItem(item);
-                     item.OnDrop();
-
+                        _Inventory.RemoveItem(item);
+                        item.OnDrop();
+                        Debug.Log("Hitting recycle");
                     }
-
                 }
-                
             }
         }
     }

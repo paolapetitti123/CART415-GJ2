@@ -90,6 +90,12 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
 
 
         }
+        else if (hit.collider.tag == "RecycleBin")
+        {
+            GameObject Trashbin = GameObject.FindGameObjectWithTag("RecycleBin");
+
+            Trashbin.GetComponent<AudioSource>().Play();
+        }
         else
         {
             Debug.Log("Not hitting the tv");
