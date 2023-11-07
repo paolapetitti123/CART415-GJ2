@@ -33,6 +33,7 @@ TagManager:
   - scareMeter
   - RecycleBin
   - CupOfWater
+  - rainVideo
   layers:
   - Default
   - TransparentFX

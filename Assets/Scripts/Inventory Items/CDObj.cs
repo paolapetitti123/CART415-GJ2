@@ -7,7 +7,7 @@ public class CDObj : MonoBehaviour, IInventoryItem
 {
     public Sprite _Image = null;
     public GameObject cdShow;
-    [SerializeField] public AudioSource musicSFX;
+
     int counter;
 
     public string Name
@@ -41,7 +41,7 @@ public class CDObj : MonoBehaviour, IInventoryItem
                 
                 GameObject character2 = GameObject.FindGameObjectWithTag("character2");
                 Animator characterAnimator = character2.GetComponent<Animator>();
-                musicSFX.Play();
+          
 
                 Debug.Log(" hitting the player");
                 
