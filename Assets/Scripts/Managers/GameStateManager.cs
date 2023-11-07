@@ -24,7 +24,9 @@ public class GameStateManager : MonoBehaviour
         GamePlay,
         GameWin,
         GameOver,
-        GameCredits
+        GameCredits, 
+        GameWinCredits,
+        GameLoseCredits
     }
 
     /* Whenever a new scene needs to be loaded, this method can be called in any script

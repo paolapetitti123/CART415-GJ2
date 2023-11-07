@@ -53,11 +53,11 @@ public class ItemDrop : MonoBehaviour, IDropHandler
                         _Inventory.RemoveItem(item);
                         item.OnDrop();
                     }
-                    else if (hit.collider.tag == "RecycleBin" && item.Name == "CDObject" || item.Name == "Cup of water" || item.Name == "Lighter" || item.Name == "Hacksaw")
+                    else if (hit.collider.tag == "RecycleBin")
                     {
                         _Inventory.RemoveItem(item);
                         item.OnDrop();
-                        Debug.Log("Hitting recycle");
+                        Debug.Log("Hitting: " + hit.collider.tag);
                     }
                 }
             }
