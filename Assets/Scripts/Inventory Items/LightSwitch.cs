@@ -28,7 +28,7 @@ public class LightSwitch : MonoBehaviour
         if (character2 != null)
         {
             // trigger character animation when chandelier falls
-            characterAnimator.Play("sitting-to-disbelief");
+            characterAnimator.Play("sitting-not-phased");
         }
             
         if (counter == 0)

@@ -73,14 +73,19 @@ public class Lighter : MonoBehaviour, IInventoryItem
                 Debug.Log("Tag foud. Hitting the candle");
                 candleFire.SetActive(true);
 
-              
+                GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+                Animator characterAnimator = character2.GetComponent<Animator>();
+                if (character2 != null)
+                {
+                    // trigger character animation when chandelier falls
+                    characterAnimator.Play("sitting-to-stand-scared");
+                }
 
-
-            }
+                }
             else if(hit.collider.tag == "RecycleBin")
             {
                 GameObject Trashbin = GameObject.FindGameObjectWithTag("RecycleBin");
-
+                gameObject.SetActive(true);
                 Trashbin.GetComponent<AudioSource>().Play();
             }
             else
@@ -111,7 +116,7 @@ public class Lighter : MonoBehaviour, IInventoryItem
         if (character2 != null)
         {
             // trigger character animation when chandelier falls
-            characterAnimator.Play("sitting-to-stand-scared");
+            //characterAnimator.Play("sitting-to-stand-scared");
             Debug.Log("scare animation for candle");
 
             if (scareMeter != null)

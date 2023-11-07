@@ -58,7 +58,6 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
 
     public void OnPickup()
     {
-
         water.SetActive(false);
     }
 
@@ -82,28 +81,26 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
                 animatedWater.SetActive(true);
 
                 Invoke("TVBreaking", 1.5f);
+                GameObject character2 = GameObject.FindGameObjectWithTag("character2");
+                Animator characterAnimator = character2.GetComponent<Animator>();
 
-               
+                characterAnimator.Play("sitting-to-stand-scared");
+
 
 
             }
-
-
+            else if (hit.collider.tag == "RecycleBin")
+            {
+                GameObject Trashbin = GameObject.FindGameObjectWithTag("RecycleBin");
+                water.SetActive(true);
+                Trashbin.GetComponent<AudioSource>().Play();
+            }
+            else
+            {
+                Debug.Log("Not hitting the tv");
+                transform.localPosition = Vector3.zero;
+            }
         }
-        else if (hit.collider.tag == "RecycleBin")
-        {
-            GameObject Trashbin = GameObject.FindGameObjectWithTag("RecycleBin");
-
-            Trashbin.GetComponent<AudioSource>().Play();
-        }
-        else
-        {
-            Debug.Log("Not hitting the tv");
-            transform.localPosition = Vector3.zero;
-        }
-
-
-
     }
 
     public void TVBreaking()
@@ -130,13 +127,13 @@ public class GlassOfWater : MonoBehaviour, IInventoryItem
         GameObject character2 = GameObject.FindGameObjectWithTag("character2");
         Animator characterAnimator = character2.GetComponent<Animator>();
 
-
+//        characterAnimator.Play("sitting-to-stand-scared");
         if (character2 != null)
         {
             // trigger character animation when chandelier falls
 
             Debug.Log("scare animation for tv");
-
+            
             if (scareMeter != null)
             {
                 if (ifCounter == 0)

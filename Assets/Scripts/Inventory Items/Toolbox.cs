@@ -7,12 +7,16 @@ public class Toolbox : MonoBehaviour
     public GameObject toolBox;
     public GameObject hacksaw;
 
+    int audioCounter;
+
+
     // Start is called before the first frame update
     void Start()
     {
         toolBox.SetActive(true);
         hacksaw.GetComponent<BoxCollider>().enabled = false;
 
+        audioCounter = 0;
     }
 
     // Update is called once per frame
@@ -26,8 +30,14 @@ public class Toolbox : MonoBehaviour
         Animator toolBoxOpen = toolBox.GetComponent<Animator>();
 
         toolBoxOpen.Play("open-toolbox");
-        gameObject.GetComponent<AudioSource>().Play();
+        if(audioCounter == 0)
+        {
+            gameObject.GetComponent<AudioSource>().Play();
+            audioCounter = 1;
 
+        }
+        
+        
         StartCoroutine(showHacksaw());
     }
 

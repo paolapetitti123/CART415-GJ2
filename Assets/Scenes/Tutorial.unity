@@ -709,7 +709,6 @@ GameObject:
   - component: {fileID: 194687211}
   - component: {fileID: 194687214}
   - component: {fileID: 194687213}
-  - component: {fileID: 194687215}
   m_Layer: 5
   m_Name: InventoryPanel
   m_TagString: InventoryPanel
@@ -818,23 +817,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &194687215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194687209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd953b1bd8cb1534b9608a0eb6c1f917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DefaultCursorTexture: {fileID: 2800000, guid: b4316ec752900b94585b829085e43ff8, type: 3}
-  HoverCursorTexture: {fileID: 2800000, guid: a13ac8e52737dcd4387b5a9d9911ed2d, type: 3}
-  cursorModeVar: 0
-  hotSpotMouse: {x: 0, y: 0}
-  OnButtonCursorHotSpot: {x: 0, y: 0}
 --- !u!1 &317637597
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +912,6 @@ GameObject:
   - component: {fileID: 322926968}
   - component: {fileID: 322926967}
   - component: {fileID: 322926966}
-  - component: {fileID: 322926969}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -1041,51 +1022,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322926964}
   m_CullTransparentMesh: 1
---- !u!114 &322926969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322926964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 194687215}
-          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
-          m_MethodName: OnButtonCursorEnter
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 194687215}
-          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
-          m_MethodName: OnButtonCursorExit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &328998640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,7 +1034,6 @@ GameObject:
   - component: {fileID: 328998644}
   - component: {fileID: 328998643}
   - component: {fileID: 328998642}
-  - component: {fileID: 328998645}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -1209,51 +1144,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328998640}
   m_CullTransparentMesh: 1
---- !u!114 &328998645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328998640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 194687215}
-          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
-          m_MethodName: OnButtonCursorEnter
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 194687215}
-          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
-          m_MethodName: OnButtonCursorExit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &369295871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1232,6 @@ GameObject:
   - component: {fileID: 408928136}
   - component: {fileID: 408928135}
   - component: {fileID: 408928134}
-  - component: {fileID: 408928137}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -1453,51 +1342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408928132}
   m_CullTransparentMesh: 1
---- !u!114 &408928137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408928132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 194687215}
-          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
-          m_MethodName: OnButtonCursorEnter
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 194687215}
-          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
-          m_MethodName: OnButtonCursorExit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &414370235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,8 +2102,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.044727508, y: 0.024689304, z: 0.060130887}
-  m_Center: {x: 0, y: -0.0034752665, z: 0.015000022}
+  m_Size: {x: 0.06921395, y: 0.034698837, z: 0.060130887}
+  m_Center: {x: 0.002035808, y: -0.008480035, z: 0.01500002}
 --- !u!95 &766049147
 Animator:
   serializedVersion: 5
@@ -2677,7 +2521,6 @@ GameObject:
   - component: {fileID: 821669112}
   - component: {fileID: 821669111}
   - component: {fileID: 821669110}
-  - component: {fileID: 821669113}
   m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
@@ -2788,51 +2631,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821669108}
   m_CullTransparentMesh: 1
---- !u!114 &821669113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821669108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 194687215}
-          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
-          m_MethodName: OnButtonCursorEnter
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 194687215}
-          m_TargetAssemblyTypeName: MouseController, Assembly-CSharp
-          m_MethodName: OnButtonCursorExit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &830291846
 GameObject:
   m_ObjectHideFlags: 0

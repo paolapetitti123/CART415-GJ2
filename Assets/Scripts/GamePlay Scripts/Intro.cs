@@ -9,14 +9,23 @@ public class Intro : MonoBehaviour
     public Camera graveCamera;
     public Camera houseCamera;
 
+    public GameObject deathCamObj;
+    public GameObject graveCamObj;
+    public GameObject houseCamObj;
+
+    [SerializeField] public AudioSource headBang;
+
 
     // Start is called before the first frame update
     void Start()
     {
        mainCamera.enabled = true;
        deathCamera.enabled = false;
+        deathCamObj.SetActive(false);
        graveCamera.enabled = false;
+        graveCamObj.SetActive(false);
         houseCamera.enabled = false;
+        houseCamObj.SetActive(false);
 
         StartCoroutine(Death());
     }
@@ -32,6 +41,7 @@ public class Intro : MonoBehaviour
         if (death != null)
         {
             deathAnimator.SetBool("isDead", true);
+            
             Debug.Log("dead animation");
         }
 
@@ -43,10 +53,12 @@ public class Intro : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         mainCamera.enabled = false;
+        deathCamObj.SetActive(true);
         deathCamera.enabled = true;
         graveCamera.enabled = false;
         houseCamera.enabled = false;
 
+        
         StartCoroutine(GraveCam());
 
     }
@@ -63,8 +75,12 @@ public class Intro : MonoBehaviour
             Debug.Log("dead animation");
         }
         deathCamera.enabled = false;
+        deathCamObj.SetActive(false);
         houseCamera.enabled = false;
+        
         graveCamera.enabled = true;
+        graveCamObj.SetActive(true);
+
 
         StartCoroutine(HouseCam());
     }
@@ -83,7 +99,10 @@ public class Intro : MonoBehaviour
         }
         deathCamera.enabled = false;
         graveCamera.enabled = false;
+        graveCamObj.SetActive(false);
         houseCamera.enabled = true;
+        houseCamObj.SetActive(true);
+
 
         StartCoroutine(StartTutorial());
     }

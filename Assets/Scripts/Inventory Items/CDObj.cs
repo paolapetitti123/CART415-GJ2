@@ -64,7 +64,7 @@ public class CDObj : MonoBehaviour, IInventoryItem
             else if (hit.collider.tag == "RecycleBin")
             {
                 GameObject Trashbin = GameObject.FindGameObjectWithTag("RecycleBin");
-
+                gameObject.SetActive(true);
                 Trashbin.GetComponent<AudioSource>().Play();
             }
             else

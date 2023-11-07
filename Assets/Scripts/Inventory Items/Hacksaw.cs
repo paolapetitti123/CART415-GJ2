@@ -78,8 +78,14 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
             else if (hit.collider.tag == "RecycleBin")
             {
                 GameObject Trashbin = GameObject.FindGameObjectWithTag("RecycleBin");
+                gameObject.SetActive(true);
 
-                Trashbin.GetComponent<AudioSource>().Play();
+                
+                hacksaw.GetComponent<Animator>().enabled = true;
+                    hacksaw.GetComponent<Animator>().Play("hacksaw-show");
+                    Trashbin.GetComponent<AudioSource>().Play();
+                
+                
             }
             else
             {
@@ -116,7 +122,7 @@ public class Hacksaw : MonoBehaviour, IInventoryItem
     private IEnumerator Fall()
     {
         fallSFX.Play();
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         mainCamera.enabled = true;
         scareCamera.enabled = false;
         Animator chandelierAnimator = chandelier.GetComponent<Animator>();
