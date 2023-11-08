@@ -39,7 +39,7 @@ public class GameWinManager : MonoBehaviour
 
     private void replayGame()
     {
-        GameStateManager.Instance.LoadScene(GameStateManager.Scene.Intro);
+        GameStateManager.Instance.LoadScene(GameStateManager.Scene.GamePlay);
     }
 
     private void GameWinCredits()
